@@ -1,0 +1,10 @@
+/* Team */
+    Front End Developmer: Abhishek Mhamane
+    Back End Developer: Abhishe Mhamane
+    UI/UX Designer: Abhishek Mhamane
+
+/* SITE */
+   Language: English
+   Standards: HTML5 CSS3
+   Software:  github
+   IDE: vscode
