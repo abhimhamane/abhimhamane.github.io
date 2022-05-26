@@ -1,15 +1,26 @@
+/* Styling HTML Document */
 html{
     box-sizing: border-box;
+    background-color: powderblue;
     font-size: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
 
 }
 
+/* Styling Body Element */
 body {
     margin: 0;
-    padding: 20px;
+    padding: 5%;
 }
 
+/* Styling Header */
 header{
     background-color: powderblue;
+    color: rgb(255, 255, 255);
+    padding: 2%;
+    text-align: center;
     
 }
+
+/* Styling Footer*/
