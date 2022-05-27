@@ -22,8 +22,8 @@
 
 <!-- Header Section -->
         <header>
-            <div>
-                <h1 class="header-name">Abhishek Mhamane</h1>
+            <div class="header-name">
+                <h1>Abhishek Mhamane</h1>
             </div>            
         <!--Navigation Section-->
 
@@ -33,20 +33,19 @@
                 </span>
             </button>
 
-            <nav class="nav">
+            <nav class="nav" aria-label="primary">
                 <ul>
-                    <li class="nav__item"><a href="index.html" class="nav__link">About</a></li>
-                    
-                    <li class="nav__item"><a href="#">Project</a></li>
-                    <li class="nav__item"><a href="#">Contact</a></li>
+                    <li><a href="index.html">About</a></li>
+                    <li><a href="#projects">Project</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </header>
 
         <main>
 <!--### About Me Page (Section)-->
-            <section class="about-section" id="about">
-                
+            <section class="about-section" id="about" aria-label="About Section">
+
                 <div class="about-profile">
                     <div class="about-profile-pic">
                         <img src="img/profile-pic.jpg">
@@ -57,14 +56,14 @@
                     </div>
 
                     <div class="about-profile-socialmedia">
-                        <nav>
-                                <li><a href="#"></a>
+                        <nav aria-label="Social media links">
+                                <li><a href="#" aria-label="LinkedIn"></a>
                                     LinkedIn
                                 </li>
-                                <li><a href="#"></a>
+                                <li><a href="#" aria-label="Research Gate"></a>
                                     ResearchGate
                                 </li>
-                                <li><a href="#"></a>
+                                <li><a href="#" aria-label="Git Hub"></a>
                                     GitHub
                                 </li>
                             </ul>
@@ -73,25 +72,78 @@
 
                 </div>
 
-                <div class="about-intro">
+                <div class="about-intro" id="introduction">
+                    <h2>About Me</h2>
+                    <p>
+                        I am Abhishek Mhamane, interested in <strong>Remote Sensing</strong> and <strong>Goespatial technologies</strong>.
+                        I recently graduated from <em>VNIT Nagpur</em> in Civil Engineering. I want to pursue a research 
+                        oriented career in the field of <strong>Geoinformatics</strong>. I am very optimistic about the potential, Goespatial 
+                        technologies possess. I have experience of working with open-source GIS softwares like <strong>QGIS</strong>. 
+                        I have also done projects relating to Geoinformatics such as <a href="#structural-analysis-website">Web development</a> and <a href="#soil-classification"> ML based Soil Classifier</a>. 
+                        I am constanly learning and improving my <a href="#skills">skills</a>.
+                    </p>
 
                 </div>
 
-                <div class="about-education">
+                <div class="about-education" id="education">
+                    <h2> Education</h2>
+                    <div class="degree" id="bachelors">
+                        
+                        <img src="img/VNIT_logo.jpeg">
+                        <h3>Visvesvaraya National Institute of Technology(VNIT), Nagpur</h3>
+                        <h4>B.Tech in Civil Engineering | class of 2022</h4>
+                        <h5>CGPA: 8.27/10.0 </h5>
+
+                    <div class="degree" id="masters">
+                        <h3>Indian Institute of Technology, Kanpur</h3>
+                        <h4>M.Tech in Geoinformatics | class of 2024</h4>
+
+                    </div>
 
                 </div>
 
-                <div class="about-skills">
+                <div class="about-skills" id="skills">
+                    <div class="skill" id="programming-skills">
 
+                    </div>
+
+                    <div class="skill" id="software-skills">
+
+                    </div>
+
+                    <div class="skill" id="Language-skills">
+
+                    </div>
+
+                </div>
+
+                <div class="about-achievements" id="achievements">
+                    <div class="achievement" id="gate-geomatics">
+
+                    </div>
+
+                    <div class="achievement" id="pmss">
+
+                    </div>
                 </div>
 
                 <div class="about-interests">
+                    <div class="interest" id="literature">
 
+                    </div>
+
+                    <div class="interest" id="outdoors">
+
+                    </div>
+
+                    <div class="interest" id="languages">
+
+                    </div>
                 </div>
         
             </section>
 <!--### Projects Page (Section) -->
-            <section class="projects-section" id="projects">
+            <section class="projects-section" id="projects" >
                 <div class="projects-intro">
                     <h2> Projects</h2>
                 </div>
@@ -110,10 +162,14 @@
 
                     </article>
 
+                    <article class="project" id="btech-project">
+
+                    </article>
+
                 </div>
             </section>
 <!--### Projects Page (Section) -->
-            <section class="contact-section" id="contact">
+            <section class="contact-section" id="contact" aria-label="Contact section">
                 
                 <div class="contact-form">
                     <form>
@@ -127,11 +183,11 @@
 <!--Footer-->
         <footer>
             <div class="copyright-statement">
-                <p> copyright, Abhishek Mhamane 2022</p>
+                <p> &copy Abhishek Mhamane 2022</p>
             </div>
             
             <div class="nav-to-top">
-                <nav>
+                <nav aria-label="go to top">
                     <a href="#about">up-arrow-at-bottom</a>
                 </nav>
             </div>
