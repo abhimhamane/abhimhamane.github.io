@@ -1,32 +1,57 @@
 
 /* Styling HTML Document */
 html{
-    box-sizing: border-box;
-    background-color: powderblue;
-    font-size: 100%;
-    padding-left: 5%;
-    padding-right: 5%;
+    font-family: 'Times New Roman', Times, serif;
+    
+    margin: 2%;
 
 }
 
 /* Styling Body Element */
 body {
-    margin: 0;
-    padding: 5%;
+    margin: 1%;
+    padding: 1%;
+    background-color: powderblue;
 }
 
 /* Styling Header */
 header{
-    background-color: powderblue;
+    
     color: rgb(255, 255, 255);
-    padding: 2%;
+    padding: 0.5%;
     text-align: center;
+    margin-top: 1%;
+    margin-bottom: 1%;
     
 }
 
-/* Styling Footer*/
+header h1{
+    margin: 0.5%;
+    
+    padding: 0.5%;
+    
+}
 
-header{
-    background-color: powderblue;
+
+
+.navigation a{
+    text-decoration: none;
+    font-size: 1.8rem;
+    margin: 1%;
+    padding-left: 1%;
+    padding-right: 1%;
+    
+
+}
+
+/* Styling Footer */
+
+footer{ 
+    color: rgb(255, 255, 255);
+    background-color: beige;
+    padding: 0.5%;
+    text-align: center;
+    margin-top: 1%;
+    margin-bottom: 1%;
     
 }
