@@ -36,6 +36,8 @@
             <nav class="nav" aria-label="primary">
                 <ul>
                     <li><a href="index.html">About</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#skills">Skills</a></li>
                     <li><a href="#projects">Project</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
@@ -57,6 +59,7 @@
 
                     <div class="about-profile-socialmedia">
                         <nav aria-label="Social media links">
+                            <ul>
                                 <li><a href="#" aria-label="LinkedIn"></a>
                                     LinkedIn
                                 </li>
@@ -93,52 +96,100 @@
                         <h3>Visvesvaraya National Institute of Technology(VNIT), Nagpur</h3>
                         <h4>B.Tech in Civil Engineering | class of 2022</h4>
                         <h5>CGPA: 8.27/10.0 </h5>
+                    </div>
 
                     <div class="degree" id="masters">
                         <h3>Indian Institute of Technology, Kanpur</h3>
                         <h4>M.Tech in Geoinformatics | class of 2024</h4>
-
                     </div>
-
                 </div>
 
                 <div class="about-skills" id="skills">
+                    <h2>Skills</h2>
                     <div class="skill" id="programming-skills">
-
+                        <h3> Programming Skills</h3>
+                        <!--Add Logo-->
+                        <div class="programming-languages">
+                            <!-- Can Link to Certifications-->
+                            <ul>
+                                <li>
+                                    <a href="#">Python</a>
+                                    <ul>
+                                        <li>Scientific Computation Packages like 
+                                            Numpy, Scipy, Sympy, etc..
+                                        </li>
+                                        <li>Plotting Libraries like 
+                                            Matplotlib, Seaborn, Plotly, etc..
+                                        </li>
+                                        <li>AI ML Packages like Tensorfloe, Pythorch, SKLearn</li>
+                                    </ul>
+                                </li>
+                              
+                                <li><a href="#">Matlab</a></li>
+                                
+                                <li><a href="#">Web Development</a>
+                                    <ul>
+                                        <li>HTML5</li>
+                                        <li>CSS3</li>
+                                        <li>JavaScript(ES6)</li>
+                                        <li><a href="#">Django - Python Web Framework</a></li>
+                                        <li>Bootstrap5 - CSS Framework</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
 
                     <div class="skill" id="software-skills">
-
+                        <h3>Software Skills</h3>
+                        <!--Add Logo-->
+                        <div id="gis">
+                            <ul>
+                                <li>QGIS</li>
+                                <li>Google Earth Engine</li>
+                                <li>AutoCAD</li>
+                                <li>Excel</li>
+                            </ul>
+                        </div>
                     </div>
+
 
                     <div class="skill" id="Language-skills">
-
+                        <h3>Languages</h3>
+                        <!--Add logo-->
+                        <ul>
+                            <li>English - Professional Proficiency</li>
+                            <li>Hindi - Native Proficiency</li>
+                            <li>Marathi - Native Proficiency</li>
+                        </ul>
                     </div>
-
                 </div>
 
-                <div class="about-achievements" id="achievements">
-                    <div class="achievement" id="gate-geomatics">
 
+                <div class="about-achievements" id="achievements">
+                    <h3>Achievements</h3>
+                    <div class="achievement" id="gate-geomatics">
+                        <!--Can link to scorecard-->
+                        <!--Add logo-->
+                        <h4>GATE-Geomatics Engineering | Feb 2022</h4>
+                        <h5>AIR:22 | Score: 730</h5> 
                     </div>
 
                     <div class="achievement" id="pmss">
-
+                        <h4>Prime Minister's Research Scholarship | 2018-2022</h4>
+                        <h5>Recieved Scholarship for Undergraduate Education</h5>
                     </div>
                 </div>
 
                 <div class="about-interests">
-                    <div class="interest" id="literature">
-
-                    </div>
-
-                    <div class="interest" id="outdoors">
-
-                    </div>
-
-                    <div class="interest" id="languages">
-
-                    </div>
+                    <h3>Interests</h3>
+                    <!-- Add Logo -->
+                    <ul>
+                        <li>Reading Novels</li>
+                        <li>Learning Languages</li>
+                        <li>Watching Anime</li>
+                        <li>Roller Skating</li>
+                    </ul>
                 </div>
         
             </section>
@@ -149,41 +200,84 @@
                 </div>
 
                 <div class="projects">
-                    <article class="project" id="soil-classification">
+                    <article class="project" id="personal-website-proj">
+                        <h3>Personal Website - Design | Coding | Deployment</h3>
+                        <p>
+                            Designed, Codded and Deployed my website durign the summer vacation and also
+                            as a part of <a href="#"> web Development Capstone Project</a>.
+                        </p>
                         
+                        
+                    </article>
 
+                    <article class="project" id="soil-classification">
+                        <h3>Soil Classification Using Machine Learning</h3>
+                        <div>    
+                            <ul>
+                                <li>Utilised Landsat data for soil classification.</li>
+                                <li>Developed ANN from scratch and visualized “Black-box” nature of ANN.</li>
+                                <li>Achieved 90% overall accuracy.</li>
+                            </ul>
+                            <nav>
+                                <a href="#">GitHub Repo</a>
+                            </nav>
+                        </div>
                     </article>
 
                     <article class="project" id="structural-analysis-website">
-
+                        <h3>Website to learn Structural Analysis Effectively</h3>
+                        <div>
+                            <a href="#">Structural Analysis Website</a>
+                        </div>
                     </article>
 
                     <article class="project" id="smca-pipeline-routing">
+                        <h3>Spatial Multi-Criteria Analysis based Pipeline Routing</h3>
+                        <div>
 
+                        </div>
                     </article>
-
-                    <article class="project" id="btech-project">
-
-                    </article>
-
-                </div>
+                </div>    
             </section>
-<!--### Projects Page (Section) -->
+
+<!--### Contact Page (Section) -->
             <section class="contact-section" id="contact" aria-label="Contact section">
                 
-                <div class="contact-form">
+                <div class="Contact-form">
                     <form>
 
-                    </form>
+                        <label for="fname">Name</label>
+                        <input type="text" id="fname" name="firstname" placeholder="Your Name" required>
+                        <br>
+
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="abc@pqr.com" required>
+                        <br>
+
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" placeholder="Please Mention Subject of your message..." required>
+                        <br>
+
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Write your message here.." required></textarea>
+                        <br>
+
+                        <!--Change this when doing actual deployment-->
+                         <!-- 
+                        <input type="submit" value="Submit">
+                        -->
+                        <button onclick="formValidator()">Submit</button>
+                    
+                      </form>
                 </div>
             </section>
-
         </main>
 
 <!--Footer-->
         <footer>
             <div class="copyright-statement">
-                <p> &copy Abhishek Mhamane 2022</p>
+                <h5> &copy; Abhishek Mhamane</h5>
+                <h6>2022</h6>
             </div>
             
             <div class="nav-to-top">
