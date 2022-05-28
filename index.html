@@ -8,10 +8,9 @@
         <meta name="viewport" content="width=device-width, height=device-height" initial-scale="1.0">
         
         <title>Abhishek Mhamane</title>
-
-    <!-- Bootstrap Links-->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <!-- CSS Links -->
+    <!-- Link to font awesome icons and images -->
+        <script src="https://kit.fontawesome.com/28045b7f49.js" crossorigin="anonymous"></script>
+    <!-- CSS Stylesheet Links -->
         <link rel="stylesheet" href="styles/styles.css"/>
     <!-- Just a text file link -->
         <link type="text/plain" rel="author" href="humans.txt" />
@@ -21,10 +20,7 @@
     <body>
 
 <!-- Header Section -->
-        <header>
-            <div class="header-name">
-                <h1>Abhishek Mhamane</h1>
-            </div>            
+        <header>          
         <!--Navigation Section-->
 
             <button class="nav-toggle" aria-label="toggle navigation">
@@ -33,7 +29,7 @@
                 </span>
             </button>
 
-            <nav class="nav" aria-label="primary">
+            <nav class="nav-list" aria-label="primary">
                 <ul>
                     <li><a href="index.html">About</a></li>
                     <li><a href="#education">Education</a></li>
@@ -48,28 +44,21 @@
 <!--### About Me Page (Section)-->
             <section class="about-section" id="about" aria-label="About Section">
 
-                <div class="about-profile">
-                    <div class="about-profile-pic">
-                        <img src="img/profile-pic.jpg">
+                <div class="about-profile grid">
+
+                    <div class="about-profile-name">
+                        <h2 id="name-h2">Abhishek Mhamane</h2>
                     </div>
 
-                    <div class="about-profile-writeup">
-                        <h2>Abhishek Mhamane</h2>
+                    <div class="about-profile-pic">
+                        <img src="img/profile-pic.jpg"> 
                     </div>
 
                     <div class="about-profile-socialmedia">
-                        <nav aria-label="Social media links">
-                            <ul>
-                                <li><a href="#" aria-label="LinkedIn"></a>
-                                    LinkedIn
-                                </li>
-                                <li><a href="#" aria-label="Research Gate"></a>
-                                    ResearchGate
-                                </li>
-                                <li><a href="#" aria-label="Git Hub"></a>
-                                    GitHub
-                                </li>
-                            </ul>
+                        <nav class="grid-link" aria-label="Social media links">
+                            <a href="https://www.linkedin.com/in/abhishekmhamane/" class="linkedin" target="_blank" aria-label="linkedin" ><i class="fa-brands fa-linkedin fa-2xl"></i></a>
+                            <a href="https://www.researchgate.net/profile/Abhishek_Mhamane2" class="researchgate" target="_blank" aria-label="Research Gate"><i class="fa-brands fa-researchgate fa-2xl"></i></a>
+                            <a href="https://github.com/abhimhamane" class="github" target="_blank" aria-label="Git Hub"><i class="fa-brands fa-github fa-2xl"></i></a>
                         </nav>
                     </div>
 
@@ -80,7 +69,8 @@
                     <p>
                         I am Abhishek Mhamane, interested in <strong>Remote Sensing</strong> and <strong>Goespatial technologies</strong>.
                         I recently graduated from <em>VNIT Nagpur</em> in Civil Engineering. I want to pursue a research 
-                        oriented career in the field of <strong>Geoinformatics</strong>. I am very optimistic about the potential, Goespatial 
+                        oriented career in the field of <strong>Geoinformatics</strong>. 
+                        I am very optimistic about the potential, Goespatial 
                         technologies possess. I have experience of working with open-source GIS softwares like <strong>QGIS</strong>. 
                         I have also done projects relating to Geoinformatics such as <a href="#structural-analysis-website">Web development</a> and <a href="#soil-classification"> ML based Soil Classifier</a>. 
                         I am constanly learning and improving my <a href="#skills">skills</a>.
@@ -90,18 +80,21 @@
 
                 <div class="about-education" id="education">
                     <h2> Education</h2>
-                    <div class="degree" id="bachelors">
+                    <div class="degree-vnit" id="bachelors">
+                        <div class="vnit-logo">
+                            <img src="img/VNIT_logo.jpeg">
+                        </div>
                         
-                        <img src="img/VNIT_logo.jpeg">
-                        <h3>Visvesvaraya National Institute of Technology(VNIT), Nagpur</h3>
-                        <h4>B.Tech in Civil Engineering | class of 2022</h4>
-                        <h5>CGPA: 8.27/10.0 </h5>
+                        <div id="vnit">Visvesvaraya National Institute of Technology(VNIT), Nagpur</div>
+                        <div id="civil">B.Tech in Civil Engineering | class of 2022</div>
+                        <div id="cgpa">CGPA: 8.27/10.0 </div>
                     </div>
-
-                    <div class="degree" id="masters">
+                <!--
+                    <div class="degree-iit" id="masters">
                         <h3>Indian Institute of Technology, Kanpur</h3>
                         <h4>M.Tech in Geoinformatics | class of 2024</h4>
                     </div>
+                -->
                 </div>
 
                 <div class="about-skills" id="skills">
@@ -288,10 +281,5 @@
 
         </footer>
     
-
-<!-- Bootstrap JavaScript links-->
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-
     </body>
 </html>
