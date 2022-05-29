@@ -8,7 +8,7 @@
 
 /* Default style reser */
 
-body, p, a, ul, li{
+body, p, a, ul, li, figure{
     margin: 0;
     padding: 0;
     text-decoration: none;
@@ -199,43 +199,139 @@ body{
                     text-align: center;
                 }
 
-    /* Styling Skills Section */
+ /* Styling Skills Section */
     .about-skills{
         display: block;
+        
+    }
+    .about-skills > h2{
+        text-align: center;
     }
     .skill{
-        display: grid;
-        
+        display: grid;        
     }
     .skill-head{
         display: grid;
         grid-template-columns: repeat(4, 1fr);
+        
     }
-        .skill-head > i{
+        .skill-head > figure{
             grid-column: 1/2;
             grid-row: 1;
+            margin: 0;
+            text-align: center;
+            vertical-align: middle;
         }
+
         .skill-head > h3{
             grid-column: 2/5;
             grid-row: 1;
+            text-align: left;
+            margin: 0;
+        }
+    /* Programming skills */
+    .programming{
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        margin-bottom: 0.9rem;
+    }
+        .python{
+            grid-column: 3/4;
+            grid-row: 1;
+        }
+        .html {
+            grid-column: 2/3;
+            grid-row: 2;
+        }
+        .javascript {
+            grid-column: 4/5;
+            grid-row: 2;
+        }
+    /* Software Skills */
+    .software{
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        margin-bottom: 0.9rem;
+    }
+        .qgis{
+            grid-column: 1/4;
+            grid-row: 1;
+            text-align: center;
+            vertical-align: middle;
+        }
+        .qgis > figure > img{
+            width: 50%;
+            padding-top: 1rem;
+        }
+        .excel{
+            grid-column: 4/5;
+            grid-row: 1;
+        }
+        .autocad{
+            grid-column: 1/6;
+            grid-row: 2;
+        }
+        .autocad > h3{
             text-align: center;
         }
-    .programming-languages{
+    /* Language Skills */
+    .language{
         display: grid;
         grid-template-columns: repeat(6, 1fr);
+        margin-bottom: 0.5rem;
+        margin-top: 0.3rem;
+        }
+        .english{
+            grid-column: 2/3;
+            grid-row: 1;
+        }
+        .hindi{
+            grid-column: 3/4;
+            grid-row: 1;
+        }
+        .marathi{
+            grid-column: 4/5;
+            grid-row: 1;
+        }
+    /* Achievements */
+    .about-achievements > h3{
+        text-align: center;
     }
-        
+        .achievement{
+            text-align: center;
+            margin-bottom: 0.75rem;
+        }
+        .achievement h4, h5{
+            margin: 0;
+            padding: 0.1rem;
+        }
+/* Project Styling */
+    .projects-intro{
+        display: grid;
+        grid-template-columns: repeat(5,1fr);
+    }
+        .projects > figure{
+            grid-column: 1/2;
+            grid-row: 1;
+            margin: 0;
+            text-align: center;
+            vertical-align: middle;
+        }
+        .proj-h2{
+            grid-column: 2/6;
+            grid-row: 1;
+        }
+    .projects{
+        display: block;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+
+
 
 
             
 /* small talet style and layout*/
-@media screen and (min-width: 620px) {
-    .body{
-        font-size: 16px;
-    }
-    
-}
-
 
 /* Large Tablet and Laptop screen styles and layout */
 @media screen and (min-width: 960px) {
@@ -244,12 +340,4 @@ body{
         font-size: 18px;
     }
     
-}
-
-/* Desktop screens st(yles and layout */
-@media screen and (min-width: 1200px) {
-    
-    .body{
-        font-size: 20px;
-    }
 }

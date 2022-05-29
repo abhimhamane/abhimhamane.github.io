@@ -8,6 +8,8 @@
         <meta name="viewport" content="width=device-width, height=device-height" initial-scale="1.0">
         
         <title>Abhishek Mhamane</title>
+    <!-- Bootstrap Icons CDN linking-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
     <!-- Link to font awesome icons and images -->
         <script src="https://kit.fontawesome.com/28045b7f49.js" crossorigin="anonymous"></script>
     <!-- CSS Stylesheet Links -->
@@ -118,63 +120,79 @@
                     <div class="skill" id="programming-skills">
                         <div class="skill-head">
                             <figure>
-                                <i class="fa-solid fa-code fa-2xl"></i>
+                                <i class="fa-solid fa-code fa-xl"></i>
                             </figure>
-                            <h3> Programming Skills</h3>
+                         <h3> Programming Skills</h3>
                         </div>
-                        <div class="programming-languages">
-                            <!-- Can Link to Certifications-->
-                            <ul>
-                                <li>
-                                    <a href="#">Python</a>
-                                    <ul>
-                                        <li>Scientific Computation Packages like 
-                                            Numpy, Scipy, Sympy, etc..
-                                        </li>
-                                        <li>Plotting Libraries like 
-                                            Matplotlib, Seaborn, Plotly, etc..
-                                        </li>
-                                        <li>AI ML Packages like Tensorfloe, Pythorch, SKLearn</li>
-                                    </ul>
-                                </li>
-                              
-                                <li><a href="#">Matlab</a></li>
-                                
-                                <li><a href="#">Web Development</a>
-                                    <ul>
-                                        <li>HTML5</li>
-                                        <li>CSS3</li>
-                                        <li>JavaScript(ES6)</li>
-                                        <li><a href="#">Django - Python Web Framework</a></li>
-                                        <li>Bootstrap5 - CSS Framework</li>
-                                    </ul>
-                                </li>
-                            </ul>
+                        <div class="programming">
+                            <div class="python">
+                                <!-- Can Link to Certifications-->
+                                <figure>
+                                    <a href="#">
+                                        <i class="fa-brands fa-python fa-5x"></i>
+                                    </a>
+                                </figure>
+                            </div>
+                            <div class="html">
+                                <figure>
+                                    <a href="#">
+                                        <i class="fa-brands fa-html5 fa-5x"></i>
+                                    </a>
+                                </figure>
+                            </div>
+                            <div class="javascript">
+                                <figure>
+                                    <a href="#">
+                                        <i class="fa-brands fa-js fa-5x"></i>
+                                    </a>
+                                </figure>
+                            </div>
                         </div>
                     </div>
 
                     <div class="skill" id="software-skills">
-                        <h3>Software Skills</h3>
-                        <!--Add Logo-->
-                        <div id="gis">
-                            <ul>
-                                <li>QGIS</li>
-                                <li>Google Earth Engine</li>
-                                <li>AutoCAD</li>
-                                <li>Excel</li>
-                            </ul>
+                        <div class="skill-head">
+                        <figure>
+                            <i class="fa-solid fa-computer fa-xl"></i>
+                        </figure>
+                         <h3> Software Skills</h3>
+                        </div>
+                        <div class="software">
+                            <div class="qgis">
+                                <figure>
+                                    <img src="img/QGIS_logo,_2017.svg">
+                                </figure>
+                            </div>
+                            <div class="excel">
+                                <figure>
+                                    <i class="fa-solid fa-file-excel fa-4x"></i>
+                                </figure>
+                            </div>
+                            <div class="autocad">
+                                <h3>AutoCAD</h3>
+                            </div>
                         </div>
                     </div>
 
 
                     <div class="skill" id="Language-skills">
-                        <h3>Languages</h3>
-                        <!--Add logo-->
-                        <ul>
-                            <li>English - Professional Proficiency</li>
-                            <li>Hindi - Native Proficiency</li>
-                            <li>Marathi - Native Proficiency</li>
-                        </ul>
+                        <div class="skill-head">
+                            <figure>
+                                <i class="fa-solid fa-language fa-xl"></i>
+                            </figure>
+                             <h3> Language Skills</h3>
+                        </div>
+                        <div class="language">
+                            <div class="english">
+                                <strong>English</strong> 
+                            </div>
+                            <div class="hindi">
+                                <strong>Hindi</strong> 
+                            </div>
+                            <div class="marathi">
+                                <strong>Marathi</strong> 
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -183,33 +201,26 @@
                     <h3>Achievements</h3>
                     <div class="achievement" id="gate-geomatics">
                         <!--Can link to scorecard-->
-                        <!--Add logo-->
-                        <h4>GATE-Geomatics Engineering | Feb 2022</h4>
+                        <h4><a href="#">GATE-Geomatics Engineering</a> | Feb 2022</h4>
                         <h5>AIR:22 | Score: 730</h5> 
                     </div>
 
                     <div class="achievement" id="pmss">
-                        <h4>Prime Minister's Research Scholarship | 2018-2022</h4>
-                        <h5>Recieved Scholarship for Undergraduate Education</h5>
+                        <h4>Prime Minister's Scholarship Scheme</h4>
+                        <h5>Undergraduate Education | 2018-22</h5>
                     </div>
-                </div>
-
-                <div class="about-interests">
-                    <h3>Interests</h3>
-                    <!-- Add Logo -->
-                    <ul>
-                        <li>Reading Novels</li>
-                        <li>Learning Languages</li>
-                        <li>Watching Anime</li>
-                        <li>Roller Skating</li>
-                    </ul>
                 </div>
         
             </section>
 <!--### Projects Page (Section) -->
             <section class="projects-section" id="projects" >
                 <div class="projects-intro">
-                    <h2> Projects</h2>
+                    <div class="proj-h2">
+                        <h2> Projects</h2>
+                    </div>
+                    <figure>
+                        <i class="fa-solid fa-diagram-project fa-xl"></i>
+                    </figure>
                 </div>
 
                 <div class="projects">
@@ -224,16 +235,18 @@
                     </article>
 
                     <article class="project" id="soil-classification">
-                        <h3>Soil Classification Using Machine Learning</h3>
-                        <div>    
-                            <ul>
-                                <li>Utilised Landsat data for soil classification.</li>
-                                <li>Developed ANN from scratch and visualized “Black-box” nature of ANN.</li>
-                                <li>Achieved 90% overall accuracy.</li>
-                            </ul>
-                            <nav>
-                                <a href="#">GitHub Repo</a>
-                            </nav>
+                        <div class="soil-classif">
+                            <h3>Soil Classification Using Machine Learning</h3>
+                            <div>    
+                                <ul>
+                                    <li>Utilised Landsat data for soil classification.</li>
+                                    <li>Developed ANN from scratch and visualized “Black-box” nature of ANN.</li>
+                                    <li>Achieved 90% overall accuracy.</li>
+                                </ul>
+                                <nav>
+                                    <a href="#">GitHub Repo</a>
+                                </nav>
+                            </div>
                         </div>
                     </article>
 
