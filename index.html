@@ -208,25 +208,22 @@
         
             </section>
 <!--### Projects Page (Section) -->
-            <section class="projects-section" id="projects" >
+            <section class="projects-section gr5" id="projects" >
                 <div class="projects-intro">
-                    <div class="proj-h2">
-                        <h2> Projects</h2>
-                    </div>
+                    <h2> Projects</h2>
                 </div>
 
-                <div class="projects">
-                    <article class="project" id="personal-website-proj">
+                <div class="projects prj">
+                    <article class="project website" id="personal-website-proj">
                         <h3>Personal Website - Design | Coding | Deployment</h3>
                         <p>
                             Designed, Codded and Deployed my website durign the summer vacation and also
                             as a part of <a href="#"> web Development Capstone Project</a>.
                         </p>
-                        
-                        
+                   
                     </article>
 
-                    <article class="project" id="soil-classification">
+                    <article class="project soil" id="soil-classification">
                         <div class="soil-classif">
                             <h3>Soil Classification Using Machine Learning</h3>
                             <div>    
@@ -242,14 +239,14 @@
                         </div>
                     </article>
 
-                    <article class="project" id="structural-analysis-website">
+                    <article class="project struct" id="structural-analysis-website">
                         <h3>Website to learn Structural Analysis Effectively</h3>
                         <div>
                             <a href="#">Structural Analysis Website</a>
                         </div>
                     </article>
 
-                    <article class="project" id="smca-pipeline-routing">
+                    <article class="project smca" id="smca-pipeline-routing">
                         <h3>Spatial Multi-Criteria Analysis based Pipeline Routing</h3>
                         <div>
 
@@ -259,32 +256,33 @@
             </section>
 
 <!--### Contact Page (Section) -->
-            <section class="contact-section" id="contact" aria-label="Contact section">
-                
-                <div class="Contact-form">
+            <section class="contact-section cnts" id="contact" aria-label="Contact section">
+                <h3> Contact Form</h3>
+                <div class="Contact-form frm">
                     <form>
 
-                        <label for="fname">Name</label>
-                        <input type="text" id="fname" name="firstname" placeholder="Your Name" required>
+                        <label class="lbl" for="fname">Name
+                            <input class="inp" type="text" id="fname" name="firstname" placeholder="Your Name" required>
+                        </label>
                         <br>
 
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" placeholder="abc@pqr.com" required>
+                        <label class="lbl" for="email">Email</label>
+                        <input class="inp eml" type="email" id="email" name="email" placeholder="abc@pqr.com" required>
                         <br>
 
-                        <label for="subject">Subject</label>
-                        <input type="text" id="subject" name="subject" placeholder="Please Mention Subject of your message..." required>
+                        <label class="lbl" for="subject">Subject</label>
+                        <input class="inp" type="text" id="subject" name="subject" placeholder="Subject of your message..." required>
                         <br>
 
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" placeholder="Write your message here.." required></textarea>
+                        <label class="lbl" for="message">Message</label>
+                        <textarea class="txt-ara" id="message" name="message" placeholder="Write your message here.." required></textarea>
                         <br>
 
                         <!--Change this when doing actual deployment-->
                          <!-- 
                         <input type="submit" value="Submit">
                         -->
-                        <button onclick="formValidator()">Submit</button>
+                        <button class="but-on" onclick="formValidator()">Submit</button>
                     
                       </form>
                 </div>
@@ -294,13 +292,14 @@
 <!--Footer-->
         <footer>
             <div class="copyright-statement">
-                <h5> &copy; Abhishek Mhamane</h5>
-                <h6>2022</h6>
+                <h5> &copy; Abhishek Mhamane | 2022</h5>
             </div>
             
             <div class="nav-to-top">
-                <nav aria-label="go to top">
-                    <a href="#about">up-arrow-at-bottom</a>
+                <nav class="fot-nav-lst" aria-label="go to top">
+                    <a href="#about">
+                       <i class="fa-solid fa-angle-up fa-2xl"></i>
+                    </a>
                 </nav>
             </div>
 
