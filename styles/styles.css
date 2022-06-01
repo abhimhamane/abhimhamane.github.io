@@ -74,50 +74,52 @@ body{
 }
 /* Styling Header */
 /* Style Toggle - TODO*/
+.navigation{
+    display: inline-block;
+    width: 50%;
+}
+.gt1{
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+}
+.navbar-nav{
 
-.mobile-nav {
-    max-width: 480px;
-    margin: auto;
-    background-color: #555;
-    height: 500px;
-    color: white;
-    border-radius: 10px;
-  }
-  .navbar-nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
     overflow: hidden;
     background-color: #333;
-    position: relative;
-  }
-  
-  .nav-item {
+    position: fixed;
+    top: 0%;
+    width: 100%;
+    z-index: 1;
+}
+.navbar-nav > h3{
     display: none;
-  }
-  
-  .nav-item a {
+}
+.nav-item{
+    border-right: 1px solid #bbb;
+    float: left;
+}
+.nav-link{
+    display: block;
     color: white;
-    padding: 14px 16px;
+    text-align: center;
+    padding: 10px 10px;
     text-decoration: none;
-    font-size: 17px;
-    display: block;
-  }
-  
-  .nav-item a.icon {
-    background: black;
-    display: block;
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  .nav-item a:hover {
-    background-color: #ddd;
-    color: black;
-  }
-  
-  .active {
-    background-color: #04AA6D;
-    color: white;
-  }
+}
+.nav-item a:hover{
+    color: rgb(255, 255, 255);
+    background-color: #04AA6D
 
+}
+.active{
+    background-color: #04AA6D;
+
+}
+li:last-child {
+    border-right: none;
+}
 
 
 
@@ -405,9 +407,7 @@ body{
     /* Styling Header */
     /* Style Toggle - TODO*/
     
-    .nav-toggle{
-        display: none;
-    }
+    
     .navigation{
         display: inline-block;
         width: 50%;
@@ -925,7 +925,6 @@ footer > div > h5{
         text-align: center;
     }
     /* Styling Header */
-    /* Style Toggle - TODO*/
     .nav-toggle{
         display: none;
     }
