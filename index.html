@@ -25,26 +25,52 @@
         <header>          
         <!--Navigation Section-->
 
-            <button class="nav-toggle" aria-label="toggle navigation">
-                <span class="hamburger">
-                    <i class="bi bi-list"></i>
-                </span>
-            </button>
-
-            <nav class="nav-list" aria-label="primary">
-                <ul>
-                    <li><a href="index.html">About</a></li>
-                    <li><a href="#education">Education</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#projects">Project</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
+        <nav class="navbar">
+            <div class="container mobile-nav">
+                     
+                <div class="navigation">
+                    
+                    <ul class="navbar-nav gt1">
+                        <h3>Abhishek Mhamane</h3>
+                        <li class="nav-item ">
+                            <!--Initially active class 
+                                is set to home link -->
+                            <a class="nav-link" href="#">
+                                Home
+                            </a>
+                        </li>
+  
+                        <li class="nav-item">
+                            <a class="nav-link" href="#skills">
+                                Skills
+                            </a>
+                        </li>
+  
+                        <li class="nav-item">
+                            <a class="nav-link" href="#projects">
+                                Projects
+                            </a>
+                        </li>
+  
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">
+                                Contact
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                    <a href="javascript:void(0);" class="nav-toggle" onclick="myFunction()">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                 </div>    
+            </div>
+            </div>
+        </nav>
         </header>
 
         <main>
 <!--### About Me Page (Section)-->
-            <section class="about-section" id="about" aria-label="About Section">
+            <section class="about-section page-section" id="about" aria-label="About Section">
 
                 <div class="about-profile grid">
 
@@ -115,7 +141,7 @@
                 -->
                 </div>
 
-                <div class="about-skills grid3" id="skills">
+                <div class="about-skills grid3 page-section" id="skills">
                     <div class="skills-head2">
                         <h2>Skills</h2>
                     </div>
@@ -127,7 +153,7 @@
                             <div class="python">
                                 <!-- Can Link to Certifications-->
                                 <figure>
-                                    <a href="#">
+                                    <a href="https://www.coursera.org/account/accomplishments/certificate/E4D2Z3ZFMN6H">
                                         <i class="fa-brands fa-python fa-5x"></i>
                                     </a>
                                 </figure>
@@ -210,7 +236,7 @@
         
             </section>
 <!--### Projects Page (Section) -->
-            <section class="projects-section gr12" id="projects" >
+            <section class="projects-section gr12 page-section" id="projects" >
                 <div class="projects-intro">
                     <h2> Projects</h2>
                 
@@ -268,7 +294,7 @@
             </section>
 
 <!--### Contact Page (Section) -->
-            <section class="contact-section cnts" id="contact" aria-label="Contact section">
+            <section class="contact-section cnts page-section" id="contact" aria-label="Contact section">
                 <h3> Contact Form</h3>
                 <div class="Contact-form frm">
                     <form>
@@ -316,6 +342,6 @@
             </div>
 
         </footer>
-    
+        <script src="scripts/script.js"></script>
     </body>
 </html>
