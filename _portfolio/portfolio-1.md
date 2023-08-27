@@ -1,6 +1,8 @@
 ---
 title: "Soil Classification using Machine Learning: From First Principles"
 excerpt: "Short description of portfolio item number 1<br/><img src='/images/500x300.png'>"
+repository:  <a href="https://github.com/abhimhamane/soil_classification_ml"> GitHub Repo </a>
+app: <a href="https://abhimhamane-soil-classification-ml-streamlit-home-3h8izb.streamlit.app/ ">StreamLit Web App</a>
 collection: portfolio
 ---
 
