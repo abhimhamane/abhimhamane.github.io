@@ -81,14 +81,14 @@ analytics:
 # Site Author
 author:
   name             : "Abhishek"
-  avatar           : "profile.jpeg"
-  bio              : "Your biography for the left-hand sidebar"
+  avatar           : "profile_sq.jpeg"
+  bio              : "MS-Research Student at IIT Kanpur in Geoinformatics"
   location         : "Kanpur"
   employer         :
-  pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
-  googlescholar    : "http://yourfullgooglescholarurl.com"
+  pubmed           : 
+  googlescholar    : "https://scholar.google.com/citations?user=BTpeNI4AAAAJ&hl=en"
   email            :
-  researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
+  researchgate     :  "https://www.researchgate.net/profile/Abhishek_Mhamane2"
   uri              :
   bitbucket        :
   codepen          :
@@ -96,20 +96,20 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           : "academicpages"
+  github           : "https://github.com/abhimhamane"
   google_plus      :
   keybase          :
   instagram        :
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
   linkedin         :
-  orcid            : "http://orcid.org/yourorcidurl"
+  orcid            : 
   pinterest        :
   soundcloud       :
   stackoverflow    : # http://stackoverflow.com/users/123456/username
   steam            :
   tumblr           :
-  twitter          : "replacethistwitterhandle"
+  twitter          : 
   vine             :
   weibo            :
   xing             :
@@ -181,12 +181,12 @@ collections:
   publications:
     output: true
     permalink: /:collection/:path/
-  portfolio:
-    output: true
-    permalink: /:collection/:path/
-  talks:
-    output: true
-    permalink: /:collection/:path/
+ # portfolio:
+ #   output: true
+ #   permalink: /:collection/:path/
+ # talks:
+ #   output: true
+ #   permalink: /:collection/:path/
 
 
 # Defaults
@@ -210,14 +210,14 @@ defaults:
       layout: single
       author_profile: true
   # _teaching
-  - scope:
-      path: ""
-      type: teaching
-    values:
-      layout: single
-      author_profile: true
-      share: true
-      comments: true
+  #- scope:
+  #    path: ""
+  #    type: teaching
+  #  values:
+  #    layout: single
+  #    author_profile: true
+  #    share: true
+  #    comments: true
   # _publications
   - scope:
       path: ""
@@ -228,22 +228,22 @@ defaults:
       share: true
       comments: true
   # _portfolio
-  - scope:
-      path: ""
-      type: portfolio
-    values:
-      layout: single
-      author_profile: true
-      share: true
-      comment: true
+  #- scope:
+  #    path: ""
+  #    type: portfolio
+  #  values:
+  #    layout: single
+  #    author_profile: true
+  #    share: true
+  #    comment: true
   # _talks
-  - scope:
-      path: ""
-      type: talks
-    values:
-      layout: talk
-      author_profile: true
-      share: true
+  #- scope:
+  #    path: ""
+  #    type: talks
+  #  values:
+  #    layout: talk
+  #    author_profile: true
+  #    share: true
 
 # Sass/SCSS
 sass:
@@ -255,7 +255,7 @@ sass:
 permalink: /:categories/:title/
 # paginate: 5 # amount of posts to show
 # paginate_path: /page:num/
-timezone: America/Los_Angeles # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: Asia/Calcutta # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 
 # Plugins
