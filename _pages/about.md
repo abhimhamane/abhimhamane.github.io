@@ -8,6 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-# Hey, I'm Abhishek.
+# Namaste :pray:
 
-I'm a upcoming Geodesist. 
+Greetings! I'm Abhishek, an avid reader and a self-proclaimed language nerd, currently navigating my second year of master's studies at the esteemed IIT Kanpur.  
+
