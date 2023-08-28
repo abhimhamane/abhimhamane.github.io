@@ -10,8 +10,6 @@ tags:
 ---
 
 
-## Background
-
 Before joining IIT Kanpur, I only knew about Prof. Dr. Bharat Lohani from his Surveying NPTEL course (the best Surveying course to date on the Internet) and his company GeoKno’s pioneering work in LiDAR technology. My reason for staying is my newfound interest in the field of Geodesy.
 
 Geodesy studies the Earth’s Shape, Size, Rotation, Orientation, Gravity field and temporal variations. Geodesy is arguably the oldest scientific discipline. Geodesy is the foundation of the $1 trillion Geospatial Industry. A stark reality check is that India still lacks quality Geodetic Infracture.
