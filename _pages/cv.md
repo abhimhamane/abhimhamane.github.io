@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "CV"
+title: ""
 permalink: /cv/
 author_profile: true
 redirect_from:
@@ -32,7 +32,6 @@ Publications
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
 
-
-Download CV
-======
+=======
   [Download CV here](/files/Master_Resume_2023_IITK.pdf)
+=======
