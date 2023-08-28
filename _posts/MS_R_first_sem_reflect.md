@@ -1,7 +1,7 @@
 ---
 title: 'Reflecting on the first semester at IIT Kanpur'
-date: 2012-12-10
-permalink: /posts/MS_R_first_sem_reflect.md
+date: 2022-12-10
+permalink: /posts/2022/12/MS_R_first_sem_reflect.md
 tags:
   - reflection
   - IITK
