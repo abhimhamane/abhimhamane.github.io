@@ -18,7 +18,7 @@ Work experience
 ======
 * Summer 2023: SOCE Summer Intern
   * IIT Kanpur
-  * Supervisor: PhD Scholar Ibaad Anwar and Dr. Balaji Devaraju
+  * Supervisor: PhD Scholar Ibaad Anwar
 
 * Summer 2021: Summer Research Intern
   * VNIT Nagpur
@@ -32,6 +32,3 @@ Publications
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
 
-=======
-  [Download CV here](/files/Master_Resume_2023_IITK.pdf)
-=======
