@@ -20,9 +20,7 @@ The one thing I learned is that troubleshooting requires patience. I had learned
 
 Untill next time...
 
-Helpful Links:
-[1] Github Issues - https://github.com/johntruckenbrodt/pyroSAR/issues/98
-
-[2] GMTSAR DEM webpage - https://topex.ucsd.edu/gmtsar/demgen/
-
-[3] Custon shell script - https://github.com/insarwxw/run_download_DEM
+Helpful Links: <br>
+[1] Github Issues - https://github.com/johntruckenbrodt/pyroSAR/issues/98 <br>
+[2] GMTSAR DEM webpage - https://topex.ucsd.edu/gmtsar/demgen/ <br>
+[3] Custon shell script - https://github.com/insarwxw/run_download_DEM <br>
