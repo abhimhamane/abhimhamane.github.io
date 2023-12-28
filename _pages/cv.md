@@ -11,8 +11,8 @@ redirect_from:
 
 Education
 ======
-* B.Tech. in Civil Engineering, Visvesvaraya National Institute of Technology, 2018-22
 * M.S. by Research in Geoinformatics, Indian institute of Technology Kanpur, 2022-present
+* B.Tech. in Civil Engineering, Visvesvaraya National Institute of Technology, 2018-22
 
 Work experience
 ======

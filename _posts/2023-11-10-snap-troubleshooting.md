@@ -9,7 +9,7 @@ tags:
   - InSAR
 ---
 
-I have been struggling with the InSAR processing using SNAP for quite some time. There is always one cryptic message after another. The one that halted my progress was related to topographic phase removal. There was an issue with downloading the EGM96 model. I wondered why one requires a geoid model when I already have DEM for phase removal.
+I had been struggling with the InSAR processing using SNAP for quite some time. There is always one cryptic message after another. The one that halted my progress was related to topographic phase removal. There was an issue with downloading the EGM96 model. I wondered why one requires a geoid model when I already have DEM for phase removal.
 
 The issue with downloading the model was related to blocking the FTP link on IITK WiFi. I was so furious; such a trivial thing halted my progress, and I could not figure it out earlier. The issue was solved after placing the required EGM model in the necessary directory, Thanks to a helpful GitHub Issue response[1](https://github.com/johntruckenbrodt/pyroSAR/issues/98).
 .
