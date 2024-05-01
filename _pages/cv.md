@@ -32,3 +32,7 @@ Publications
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
 
+
+Download CV
+======
+<a href="../files/Abhishek_CV.pdf" target="_blank"> Download Here </a>

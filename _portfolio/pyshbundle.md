@@ -19,4 +19,4 @@ Conversely, there's a vibrant community of Python programmers, champions of the 
 <a href="https://github.com/mn5hk/pyshbundle" target="_blank"> PySHBundle GitHub Repo </a>
 
 ## Follow the Research Group
-<a href="https://ultra-pluto-7f6d1.netlify.app/" target="_black">Geodesy for Earth System Science Group (GESS) research Group at ICWaR, IISc Bangalore </a>
+<a href="https://ultra-pluto-7f6d1.netlify.app/" target="_blank">Geodesy for Earth System Science Group (GESS) research Group at ICWaR, IISc Bangalore </a>
