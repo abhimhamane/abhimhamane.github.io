@@ -15,5 +15,7 @@ This approach isn't just about achieving accurate soil classification; it's abou
 
 The results were synthesized into an interactive web app which can be found below.
 
-<a href="https://github.com/abhimhamane/soil_classification_ml" target=”_blank”> GitHub Repo </a> <br>
- <a href="https://abhimhamane-soil-classification-ml-streamlit-home-3h8izb.streamlit.app/" target=”_blank”>StreamLit Web App</a>
+<a href="https://github.com/abhimhamane/soil_classification_ml" target="_blank"> GitHub Repo </a> 
+<br>
+
+<a href="https://abhimhamane-soil-classification-ml-streamlit-home-3h8izb.streamlit.app/" target="_blank"> StreamLit Web App </a>
