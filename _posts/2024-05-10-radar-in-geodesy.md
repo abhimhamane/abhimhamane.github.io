@@ -10,3 +10,7 @@ tags:
 
 This is the first in many posts related to my thesis. This is my way of forcing myself to write daily and make positive strides in finishing my MS-R Thesis.
 
+
+
+![alt text](../images/image.png)
+
