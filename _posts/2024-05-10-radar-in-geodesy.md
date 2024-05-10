@@ -12,5 +12,5 @@ This is the first in many posts related to my thesis. This is my way of forcing 
 
 
 
-![alt text](../images/image.png)
+![alt text](/images/image.png)
 
