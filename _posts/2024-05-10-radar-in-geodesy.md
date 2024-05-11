@@ -14,3 +14,9 @@ This is the first in many posts related to my thesis. This is my way of forcing 
 
 ![alt text](/images/image.png)
 
+$\sigma = x^2 + 5$
+
+\begin{bmatrix}
+  1 & 2\\
+  3 & 4\\
+\end{bmatrix}
