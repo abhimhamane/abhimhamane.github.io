@@ -1,7 +1,7 @@
 ---
 title: 'Orbit Corrections in SNAP'
-date: 2024-06-03
-permalink: /posts/2024/05/snap-orbit/
+date: 2199-06-03
+permalink: /posts/2024/06/snap-orbit/
 tags:
   - Thesis
   - InSAR
