@@ -1,7 +1,7 @@
 ---
 title: 'Keppler's Quest'
 date: 2199-06-13
-permalink: /posts/2199/06/keppler-laws/
+permalink: /posts/2012/08/blog-post-4/
 tags:
   - Lost learning
   - Science
