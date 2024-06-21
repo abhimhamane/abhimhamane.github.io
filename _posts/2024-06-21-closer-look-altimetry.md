@@ -18,12 +18,12 @@ These are nothing new or noval ways to visualize. This might even seem very triv
 
 The red represents missing cycles whereas blue represents data availability.
 
-![envisat available](../images/altimetry-MSR-thesis/envisat-data-availability.png)
+![envisat available](/images/altimetry-MSR-thesis/envisat-data-availability.png)
 
-![Jason-1 available](../images/altimetry-MSR-thesis/jason-1data-availability.png)
+![Jason-1 available](/images/altimetry-MSR-thesis/jason-1data-availability.png)
 
 SARAL ALES OpenADB data
-![Saral available](../images/altimetry-MSR-thesis/saral-data-availability.png)
+![Saral available](/images/altimetry-MSR-thesis/saral-data-availability.png)
 
 ### 2. Waveform contamination and distance to coast
 
@@ -34,14 +34,14 @@ The waveforms were retrieved from the Sensor record from AVISO.
 
 In the standard AVISO GDR data processing the coastal regions are masked. Whereas the Sea Surface Height (SSH) info can be retrieved to certain extent using coastal retracking algorithms. Precisely can be observed in the ALES OpenADB data.
 
-<img src="../images/altimetry-MSR-thesis/aviso-ales-distance2coast.png" alt="Waveform contamination" width="250"/>
+<img src="/images/altimetry-MSR-thesis/aviso-ales-distance2coast.png" alt="Waveform contamination" width="250"/>
 
 
 ### 3. Spatial and Temporal resolution tradeoff
 
 The tracks of SARAL are more closely spaced compared to the Jason-2 tracks. SARAL has a repeat cycle of ~35 days whereas Jason-2 has of ~11 days.
 
-<img src="../images/altimetry-MSR-thesis/tracks.png" alt="Waveform contamination" width="250"/>
+<img src="/images/altimetry-MSR-thesis/tracks.png" alt="Waveform contamination" width="250"/>
 
 
 ### 4. Repeat Passes
