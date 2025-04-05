@@ -2,6 +2,7 @@
 # https://github.com/riggraz/no-style-please#customize-the-menu
 
 - title: Blog - all posts
+  entries:
   post_list : 
     limit: 3
     show_more: true
@@ -9,6 +10,7 @@
     show_more_url: archive.html
 
 - title: On learning 
+  entries:
   post_list:
     limit: 2
     category: MS
@@ -17,18 +19,9 @@
     show_more_url: archive_learnings.html
 
 - title: What I'm reading?
+  entries:
   post_list:
     category: books
     show_more: true
     show_more_text: See more posts...
     show_more_url: archive_books.html
-
-- title: Contact me
-  entries:
-    - title: email 
-      url: mailto:abhi4socials@gmail.com
-    - title: linkedin
-      url: https://www.linkedin.com/in/abhishek-mhamane/
-    - title: github 
-      url: https://github.com/abhimhamane
-
