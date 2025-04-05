@@ -7,14 +7,12 @@ entries:
 
   - title: Blog - all posts
     post_list : 
-      limit: 3
       show_more: true
       show_more_text: See archive...
       show_more_url: archive.html
       
   - title: On learning 
     post_list:
-      limit: 2
       category: MS
       show_more: true
       show_more_text: See more posts...
