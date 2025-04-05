@@ -2,7 +2,7 @@
 layout: post
 title: 'Closer look at the Altimetric Datasets'
 date: 2024-06-21
-permalink: /posts/2024/06/closer-look-altimetry/
+permalink: /blog/closer-look-altimetry/
 tags:
   - IITK
   - Thesis

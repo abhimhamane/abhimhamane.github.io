@@ -3,6 +3,7 @@ layout: post
 title: 'Orbit Corrections in SNAP'
 date: 2024-06-03
 categories: MS
+permalink: /blog/orbit-correction-snap/
 ---
 
 There's a pretty common issue while performing orbit correction in ESA-SNAP. There's a simple way to pre-download the required orbit files:
