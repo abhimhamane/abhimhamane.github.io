@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Orbit Corrections in SNAP</title><!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Orbit Corrections in SNAP" />
+<meta name="author" content="Abhishek Mhamane" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="There’s a pretty common issue while performing orbit correction in ESA-SNAP. There’s a simple way to pre-download the required orbit files: All the files one at a time (bulk) As per the requirement." />
+<meta property="og:description" content="There’s a pretty common issue while performing orbit correction in ESA-SNAP. There’s a simple way to pre-download the required orbit files: All the files one at a time (bulk) As per the requirement." />
+<link rel="canonical" href="http://localhost:4000/blog/snap-orbit/" />
+<meta property="og:url" content="http://localhost:4000/blog/snap-orbit/" />
+<meta property="og:site_name" content="wandering earthling" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-06-03T00:00:00+05:30" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Orbit Corrections in SNAP" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Abhishek Mhamane"},"dateModified":"2024-06-03T00:00:00+05:30","datePublished":"2024-06-03T00:00:00+05:30","description":"There’s a pretty common issue while performing orbit correction in ESA-SNAP. There’s a simple way to pre-download the required orbit files: All the files one at a time (bulk) As per the requirement.","headline":"Orbit Corrections in SNAP","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/snap-orbit/"},"url":"http://localhost:4000/blog/snap-orbit/"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="wandering earthling" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/assets/css/main.css" />
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6692059565174248"
+     crossorigin="anonymous"></script>
+</head><body data-theme="auto">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <button id="mode"><span id="mode-text">🌕</span></button>
+        <a href="/">hompage</a><article>
+  <p class="post-meta">
+    <span class="reading-time" title="Estimated read time">
+  
+  
+    3 mins
+  
+</span>
+ | <time datetime="2024-06-03 00:00:00 +0530">2024-06-03</time>
+  </p>
+  
+  <h1>Orbit Corrections in SNAP</h1>
+
+  <ul><li><a href="#1-bulk-download-orbit-data-till-date">1. Bulk download (Orbit data till date)</a></li><li><a href="#2-individual-download">2. Individual download</a></li><li><a href="#references">References</a></li></ul>
+
+
+
+  <p>There’s a pretty common issue while performing orbit correction in ESA-SNAP. There’s a simple way to pre-download the required orbit files:</p>
+<ol>
+  <li>All the files one at a time (bulk)</li>
+  <li>As per the requirement.</li>
+</ol>
+
+<p>The required orbit files need to be placed in appropriate folder <code class="language-plaintext highlighter-rouge">.snap/auxdata/Orbits/Sentinel-1/POEORB/S1A/2019/04/19</code>.</p>
+
+<p><strong>NOTE</strong> - <strong><code class="language-plaintext highlighter-rouge">POEORB</code> stands for precise orbits, <code class="language-plaintext highlighter-rouge">RESORB</code> stands for restituted orbits. And depending on the satellite vehical <code class="language-plaintext highlighter-rouge">S1A</code> and <code class="language-plaintext highlighter-rouge">S1B</code> can be used. The files can be organized in the following structure - <code class="language-plaintext highlighter-rouge">year</code>, <code class="language-plaintext highlighter-rouge">month</code> and <code class="language-plaintext highlighter-rouge">day</code>. Individual files for each day can be placed in their respective folder.</strong></p>
+
+<h3 id="1-bulk-download-orbit-data-till-date">1. Bulk download (Orbit data till date)</h3>
+
+<p><strong>NOTE</strong> <strong>Precise orbit data is delayed by around 2 weeks.</strong></p>
+
+<p>The bulk data can be downloaded from the very well maintained GitHub repo by <a href="https://github.com/AlexeyPechnikov/S1orbits">Alexey Pechnikov (PyGMTSAR maintainer)</a>. Simply clone or download the repo and place the orbits folder at <code class="language-plaintext highlighter-rouge">.snap/auxdata/Orbits/Sentinel-1/POEORB/</code>.</p>
+
+<h3 id="2-individual-download">2. Individual download</h3>
+
+<p>Head to the <code class="language-plaintext highlighter-rouge">https://step.esa.int/auxdata/orbits/</code> in order to download the required orbits depending on your required scene.</p>
+
+<p>One can follow the automated approach using Python scripts. A crude script can be found to bulk download, this can be simply modified to download specific files too.</p>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="sh">"""</span><span class="s">This script is to fix the issues with Sentinel-1 Precise Orbit download
+issue faced in SNAP.
+</span><span class="sh">"""</span>
+<span class="kn">import</span> <span class="n">requests</span>
+<span class="kn">from</span> <span class="n">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
+<span class="kn">import</span> <span class="n">wget</span>
+<span class="kn">import</span> <span class="n">os</span>
+<span class="kn">from</span> <span class="n">tqdm</span> <span class="kn">import</span> <span class="n">tqdm</span>
+
+<span class="c1"># get a list of all the updated 
+</span><span class="n">url</span> <span class="o">=</span> <span class="sh">"</span><span class="s">https://step.esa.int/auxdata/orbits/Sentinel-1/POEORB/S1A/</span><span class="sh">"</span>
+
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="n">soup</span> <span class="o">=</span> <span class="nc">BeautifulSoup</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">content</span><span class="p">,</span> <span class="sh">"</span><span class="s">html.parser</span><span class="sh">"</span><span class="p">)</span>
+<span class="n">years_links</span> <span class="o">=</span> <span class="p">[</span><span class="n">link</span><span class="p">[</span><span class="sh">'</span><span class="s">href</span><span class="sh">'</span><span class="p">]</span> <span class="k">for</span> <span class="n">link</span> <span class="ow">in</span> <span class="n">soup</span><span class="p">.</span><span class="nf">find_all</span><span class="p">(</span><span class="sh">'</span><span class="s">a</span><span class="sh">'</span><span class="p">,</span> <span class="n">href</span><span class="o">=</span><span class="bp">True</span><span class="p">)][</span><span class="mi">1</span><span class="p">:]</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">years_links</span><span class="p">)</span>
+
+<span class="n">download_root</span> <span class="o">=</span> <span class="sh">"</span><span class="s">../.snap/auxdata/Orbits/Sentinel-1/POEORB/S1A/</span><span class="sh">"</span>
+
+<span class="k">for</span> <span class="n">year</span> <span class="ow">in</span> <span class="n">years_links</span><span class="p">:</span>
+    <span class="n">yearly_url</span> <span class="o">=</span> <span class="n">url</span> <span class="o">+</span> <span class="n">year</span>
+    <span class="n">yearly_response</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="n">yearly_url</span><span class="p">)</span>
+    <span class="n">yearly_parser</span> <span class="o">=</span> <span class="nc">BeautifulSoup</span><span class="p">(</span><span class="n">yearly_response</span><span class="p">.</span><span class="n">content</span><span class="p">,</span> <span class="sh">"</span><span class="s">html.parser</span><span class="sh">"</span><span class="p">)</span>
+    <span class="n">monthly_links</span> <span class="o">=</span> <span class="p">[</span><span class="n">link</span><span class="p">[</span><span class="sh">'</span><span class="s">href</span><span class="sh">'</span><span class="p">]</span> <span class="k">for</span> <span class="n">link</span> <span class="ow">in</span> <span class="n">yearly_parser</span><span class="p">.</span><span class="nf">find_all</span><span class="p">(</span><span class="sh">'</span><span class="s">a</span><span class="sh">'</span><span class="p">,</span> <span class="n">href</span><span class="o">=</span><span class="bp">True</span><span class="p">)][</span><span class="mi">1</span><span class="p">:]</span>
+    <span class="nf">print</span><span class="p">(</span><span class="n">monthly_links</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">month</span> <span class="ow">in</span> <span class="nf">tqdm</span><span class="p">(</span><span class="n">monthly_links</span><span class="p">):</span>
+        <span class="n">monthly_url</span> <span class="o">=</span> <span class="n">yearly_url</span> <span class="o">+</span> <span class="n">month</span>
+        <span class="n">monthly_response</span> <span class="o">=</span>  <span class="n">requests</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="n">monthly_url</span><span class="p">)</span>
+        <span class="n">monthly_parser</span> <span class="o">=</span> <span class="nc">BeautifulSoup</span><span class="p">(</span><span class="n">monthly_response</span><span class="p">.</span><span class="n">content</span><span class="p">,</span> <span class="sh">"</span><span class="s">html.parser</span><span class="sh">"</span><span class="p">)</span>
+        <span class="n">orbit_links</span> <span class="o">=</span> <span class="p">[</span><span class="n">link</span><span class="p">[</span><span class="sh">'</span><span class="s">href</span><span class="sh">'</span><span class="p">]</span> <span class="k">for</span> <span class="n">link</span> <span class="ow">in</span> <span class="n">monthly_parser</span><span class="p">.</span><span class="nf">find_all</span><span class="p">(</span><span class="sh">'</span><span class="s">a</span><span class="sh">'</span><span class="p">,</span> <span class="n">href</span><span class="o">=</span><span class="bp">True</span><span class="p">)]</span>
+
+        <span class="c1"># structure of download folder as per year/month
+</span>        <span class="n">download_folder</span> <span class="o">=</span> <span class="n">download_root</span> <span class="o">+</span> <span class="n">year</span>
+        <span class="k">if</span> <span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="nf">exists</span><span class="p">(</span><span class="n">download_folder</span><span class="p">):</span>
+            <span class="k">pass</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">os</span><span class="p">.</span><span class="nf">mkdir</span><span class="p">(</span><span class="n">download_folder</span><span class="p">)</span>
+        
+        <span class="n">download_folder</span> <span class="o">=</span> <span class="n">download_folder</span> <span class="o">+</span> <span class="n">month</span>
+        <span class="k">if</span> <span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="nf">exists</span><span class="p">(</span><span class="n">download_folder</span><span class="p">):</span>
+            <span class="k">pass</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">os</span><span class="p">.</span><span class="nf">mkdir</span><span class="p">(</span><span class="n">download_folder</span><span class="p">)</span>
+        
+        <span class="c1"># download the file
+</span>        <span class="n">os</span><span class="p">.</span><span class="nf">chdir</span><span class="p">(</span><span class="n">download_folder</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">link</span> <span class="ow">in</span> <span class="nf">tqdm</span><span class="p">(</span><span class="n">orbit_links</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">link</span><span class="p">.</span><span class="nf">endswith</span><span class="p">(</span><span class="sh">'</span><span class="s">.EOF.zip</span><span class="sh">'</span><span class="p">):</span>
+                <span class="n">file_url</span> <span class="o">=</span> <span class="n">monthly_url</span> <span class="o">+</span> <span class="n">link</span>
+                <span class="n">filename</span> <span class="o">=</span> <span class="n">link</span><span class="p">.</span><span class="nf">split</span><span class="p">(</span><span class="sh">'</span><span class="s">/</span><span class="sh">'</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+                <span class="n">wget</span><span class="p">.</span><span class="nf">download</span><span class="p">(</span><span class="n">file_url</span><span class="p">)</span>
+                <span class="nf">print</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="s">Downloaded </span><span class="si">{</span><span class="n">filename</span><span class="si">}</span><span class="sh">"</span><span class="p">)</span>
+        <span class="k">break</span>
+    <span class="k">break</span>
+</code></pre></div></div>
+
+<h3 id="references">References</h3>
+<ul>
+  <li>STEP forum - https://forum.step.esa.int/</li>
+  <li>ChatGPT for web scrapping</li>
+  <li>PyGMTSAR - https://github.com/AlexeyPechnikov/pygmtsar</li>
+</ul>
+
+</article>
+      </div>
+    </main>
+    <script src="/assets/js/mode-change.js"></script>
+  </body>
+</html>

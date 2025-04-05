@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-04-06T03:14:36+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">wandering earthling</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><author><name>Abhishek Mhamane</name></author><entry><title type="html">Book TBR list 2025</title><link href="http://localhost:4000/blog/book-tbr-2025/" rel="alternate" type="text/html" title="Book TBR list 2025" /><published>2025-04-06T00:00:00+05:30</published><updated>2025-04-06T00:00:00+05:30</updated><id>http://localhost:4000/blog/book-tbr-2025</id><content type="html" xml:base="http://localhost:4000/blog/book-tbr-2025/"><![CDATA[<p>It’s time to get back into reading. Well it’s already past the first quarter of 2025 and an oppurtune time to set a goal. So I wish to read the following books this year. From various generas - fistion, history, popular science, non-fiction, biographical etc.</p>
+
+<ol>
+  <li>Germany - Memories of a Nation by Neil MacGregor</li>
+  <li>Classical Mechanics - The Theoretical Minimum by Leonard Susskind and George Hrabovsky</li>
+  <li>Measuring the World by Daniel Kehlmann</li>
+  <li>Lajja by Taslima Nasrin</li>
+  <li>Tuesdays with Morrie by Mitch Albom</li>
+  <li>The Wonder that was India 1200 - 1700 (Vol. Two) by S. A. A. Rizvi</li>
+  <li>The Gene: An Intimate History by Siddhartha Mukherjee</li>
+  <li>The Subtle Art of Not Giving a F*ck by Mark Manson</li>
+  <li>Gut by Giulia Enders</li>
+</ol>]]></content><author><name>Abhishek Mhamane</name></author><category term="books" /><summary type="html"><![CDATA[It’s time to get back into reading. Well it’s already past the first quarter of 2025 and an oppurtune time to set a goal. So I wish to read the following books this year. From various generas - fistion, history, popular science, non-fiction, biographical etc.]]></summary></entry><entry><title type="html">Closer look at the Altimetric Datasets</title><link href="http://localhost:4000/blog/closer-look-altimetry/" rel="alternate" type="text/html" title="Closer look at the Altimetric Datasets" /><published>2024-06-21T00:00:00+05:30</published><updated>2024-06-21T00:00:00+05:30</updated><id>http://localhost:4000/blog/closer-look-altimetry</id><content type="html" xml:base="http://localhost:4000/blog/closer-look-altimetry/"><![CDATA[<p>Let’s take a look at different datasets with help of some Visualizations. The two datasets used are -</p>
+<ol>
+  <li>AVISO GDR</li>
+  <li>ALES OpenADB coastal retracked from Technical University of Munich (TUM)</li>
+</ol>
+
+<p>These are nothing new or noval ways to visualize. This might even seem very trivial to many, but this is my effort to document my learnings and develop as a researcher.</p>
+
+<h3 id="1-data-availability-missing-cycles-across-cycles-and-tracks">1. Data Availability (Missing Cycles) across cycles and tracks</h3>
+
+<p>The red represents missing cycles whereas blue represents data availability.</p>
+
+<p><img src="/images/altimetry-MSR-thesis/envisat-data-availability.png" alt="envisat available" /></p>
+
+<p><img src="/images/altimetry-MSR-thesis/jason-1data-availability.png" alt="Jason-1 available" /></p>
+
+<p>SARAL ALES OpenADB data
+<img src="/images/altimetry-MSR-thesis/saral-data-availability.png" alt="Saral available" /></p>
+
+<h3 id="2-waveform-contamination-and-distance-to-coast">2. Waveform contamination and distance to coast</h3>
+
+<p>The waveforms were retrieved from the Sensor record from AVISO.</p>
+
+<p><img src="/images/altimetry-MSR-thesis/altimetry_waveform_different_regions.svg" alt="Waveform contamination" width="400" /></p>
+
+<p>In the standard AVISO GDR data processing the coastal regions are masked. Whereas the Sea Surface Height (SSH) info can be retrieved to certain extent using coastal retracking algorithms. Precisely can be observed in the ALES OpenADB data.</p>
+
+<p><img src="/images/altimetry-MSR-thesis/aviso-ales-distance2coast.png" alt="Waveform contamination" width="250" /></p>
+
+<h3 id="3-spatial-and-temporal-resolution-tradeoff">3. Spatial and Temporal resolution tradeoff</h3>
+
+<p>The tracks of SARAL are more closely spaced compared to the Jason-2 tracks. SARAL has a repeat cycle of ~35 days whereas Jason-2 has of ~11 days.</p>
+
+<p><img src="/images/altimetry-MSR-thesis/tracks.png" alt="Waveform contamination" width="250" /></p>
+
+<h3 id="4-repeat-passes">4. Repeat Passes</h3>
+
+<p>The repeat passes do not allign exactly, which is expected due to orbital peturbations and other practical limitaion involved with satellite geodesy.</p>
+
+<p><img src="/images/altimetry-MSR-thesis/changes-cycles-tracks.png" alt="Waveform contamination" width="550" /></p>
+
+<h3 id="5-closer-look-at-the-repeat-passes">5. Closer look at the repeat passes</h3>
+
+<p>SARAL mission has pretty scattered accquisation points, scattered both along the accending and descending tracks.</p>
+
+<p><img src="/images/altimetry-MSR-thesis/saral-cycles-tracks.png" alt="Waveform contamination" width="350" /></p>
+
+<p>Curiously, for Jason-2 the accqisations are pretty well clustered along descending track and not so well along the ascending track. I could not find any references which explained this observations.</p>
+
+<p><img src="/images/altimetry-MSR-thesis/jason-cycles-cluster.png" alt="Waveform contamination" width="350" /></p>
+
+<h3 id="6-lets-find-the-cross-over-points">6. Let’s find the Cross-Over points</h3>
+
+<p>The cross-over was identified by determining the minimum distance b/w pairs of ascending and descending track accquisations over a small window.</p>
+
+<p><img src="/images/altimetry-MSR-thesis/track-intersection-1.png" alt="Waveform contamination" width="350" /></p>
+
+<p>The traingle represent the two cross-over points, not exactly coinciding with each other.</p>
+
+<p><img src="/images/altimetry-MSR-thesis/track-intersection-2.png" alt="Waveform contamination" width="350" /></p>
+
+<p>Following the same approach for other cycles we get the following variations in cross-over points.</p>
+
+<p><img src="/images/altimetry-MSR-thesis/track-intersection-3.png" alt="Waveform contamination" width="350" /></p>]]></content><author><name>Abhishek Mhamane</name></author><category term="IITK" /><category term="Thesis" /><category term="Altimetry" /><summary type="html"><![CDATA[Let’s take a look at different datasets with help of some Visualizations. The two datasets used are - AVISO GDR ALES OpenADB coastal retracked from Technical University of Munich (TUM)]]></summary></entry><entry><title type="html">Orbit Corrections in SNAP</title><link href="http://localhost:4000/blog/snap-orbit/" rel="alternate" type="text/html" title="Orbit Corrections in SNAP" /><published>2024-06-03T00:00:00+05:30</published><updated>2024-06-03T00:00:00+05:30</updated><id>http://localhost:4000/blog/snap-orbit</id><content type="html" xml:base="http://localhost:4000/blog/snap-orbit/"><![CDATA[<p>There’s a pretty common issue while performing orbit correction in ESA-SNAP. There’s a simple way to pre-download the required orbit files:</p>
+<ol>
+  <li>All the files one at a time (bulk)</li>
+  <li>As per the requirement.</li>
+</ol>
+
+<p>The required orbit files need to be placed in appropriate folder <code class="language-plaintext highlighter-rouge">.snap/auxdata/Orbits/Sentinel-1/POEORB/S1A/2019/04/19</code>.</p>
+
+<p><strong>NOTE</strong> - <strong><code class="language-plaintext highlighter-rouge">POEORB</code> stands for precise orbits, <code class="language-plaintext highlighter-rouge">RESORB</code> stands for restituted orbits. And depending on the satellite vehical <code class="language-plaintext highlighter-rouge">S1A</code> and <code class="language-plaintext highlighter-rouge">S1B</code> can be used. The files can be organized in the following structure - <code class="language-plaintext highlighter-rouge">year</code>, <code class="language-plaintext highlighter-rouge">month</code> and <code class="language-plaintext highlighter-rouge">day</code>. Individual files for each day can be placed in their respective folder.</strong></p>
+
+<h3 id="1-bulk-download-orbit-data-till-date">1. Bulk download (Orbit data till date)</h3>
+
+<p><strong>NOTE</strong> <strong>Precise orbit data is delayed by around 2 weeks.</strong></p>
+
+<p>The bulk data can be downloaded from the very well maintained GitHub repo by <a href="https://github.com/AlexeyPechnikov/S1orbits">Alexey Pechnikov (PyGMTSAR maintainer)</a>. Simply clone or download the repo and place the orbits folder at <code class="language-plaintext highlighter-rouge">.snap/auxdata/Orbits/Sentinel-1/POEORB/</code>.</p>
+
+<h3 id="2-individual-download">2. Individual download</h3>
+
+<p>Head to the <code class="language-plaintext highlighter-rouge">https://step.esa.int/auxdata/orbits/</code> in order to download the required orbits depending on your required scene.</p>
+
+<p>One can follow the automated approach using Python scripts. A crude script can be found to bulk download, this can be simply modified to download specific files too.</p>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="sh">"""</span><span class="s">This script is to fix the issues with Sentinel-1 Precise Orbit download
+issue faced in SNAP.
+</span><span class="sh">"""</span>
+<span class="kn">import</span> <span class="n">requests</span>
+<span class="kn">from</span> <span class="n">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
+<span class="kn">import</span> <span class="n">wget</span>
+<span class="kn">import</span> <span class="n">os</span>
+<span class="kn">from</span> <span class="n">tqdm</span> <span class="kn">import</span> <span class="n">tqdm</span>
+
+<span class="c1"># get a list of all the updated 
+</span><span class="n">url</span> <span class="o">=</span> <span class="sh">"</span><span class="s">https://step.esa.int/auxdata/orbits/Sentinel-1/POEORB/S1A/</span><span class="sh">"</span>
+
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="n">soup</span> <span class="o">=</span> <span class="nc">BeautifulSoup</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">content</span><span class="p">,</span> <span class="sh">"</span><span class="s">html.parser</span><span class="sh">"</span><span class="p">)</span>
+<span class="n">years_links</span> <span class="o">=</span> <span class="p">[</span><span class="n">link</span><span class="p">[</span><span class="sh">'</span><span class="s">href</span><span class="sh">'</span><span class="p">]</span> <span class="k">for</span> <span class="n">link</span> <span class="ow">in</span> <span class="n">soup</span><span class="p">.</span><span class="nf">find_all</span><span class="p">(</span><span class="sh">'</span><span class="s">a</span><span class="sh">'</span><span class="p">,</span> <span class="n">href</span><span class="o">=</span><span class="bp">True</span><span class="p">)][</span><span class="mi">1</span><span class="p">:]</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">years_links</span><span class="p">)</span>
+
+<span class="n">download_root</span> <span class="o">=</span> <span class="sh">"</span><span class="s">../.snap/auxdata/Orbits/Sentinel-1/POEORB/S1A/</span><span class="sh">"</span>
+
+<span class="k">for</span> <span class="n">year</span> <span class="ow">in</span> <span class="n">years_links</span><span class="p">:</span>
+    <span class="n">yearly_url</span> <span class="o">=</span> <span class="n">url</span> <span class="o">+</span> <span class="n">year</span>
+    <span class="n">yearly_response</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="n">yearly_url</span><span class="p">)</span>
+    <span class="n">yearly_parser</span> <span class="o">=</span> <span class="nc">BeautifulSoup</span><span class="p">(</span><span class="n">yearly_response</span><span class="p">.</span><span class="n">content</span><span class="p">,</span> <span class="sh">"</span><span class="s">html.parser</span><span class="sh">"</span><span class="p">)</span>
+    <span class="n">monthly_links</span> <span class="o">=</span> <span class="p">[</span><span class="n">link</span><span class="p">[</span><span class="sh">'</span><span class="s">href</span><span class="sh">'</span><span class="p">]</span> <span class="k">for</span> <span class="n">link</span> <span class="ow">in</span> <span class="n">yearly_parser</span><span class="p">.</span><span class="nf">find_all</span><span class="p">(</span><span class="sh">'</span><span class="s">a</span><span class="sh">'</span><span class="p">,</span> <span class="n">href</span><span class="o">=</span><span class="bp">True</span><span class="p">)][</span><span class="mi">1</span><span class="p">:]</span>
+    <span class="nf">print</span><span class="p">(</span><span class="n">monthly_links</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">month</span> <span class="ow">in</span> <span class="nf">tqdm</span><span class="p">(</span><span class="n">monthly_links</span><span class="p">):</span>
+        <span class="n">monthly_url</span> <span class="o">=</span> <span class="n">yearly_url</span> <span class="o">+</span> <span class="n">month</span>
+        <span class="n">monthly_response</span> <span class="o">=</span>  <span class="n">requests</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="n">monthly_url</span><span class="p">)</span>
+        <span class="n">monthly_parser</span> <span class="o">=</span> <span class="nc">BeautifulSoup</span><span class="p">(</span><span class="n">monthly_response</span><span class="p">.</span><span class="n">content</span><span class="p">,</span> <span class="sh">"</span><span class="s">html.parser</span><span class="sh">"</span><span class="p">)</span>
+        <span class="n">orbit_links</span> <span class="o">=</span> <span class="p">[</span><span class="n">link</span><span class="p">[</span><span class="sh">'</span><span class="s">href</span><span class="sh">'</span><span class="p">]</span> <span class="k">for</span> <span class="n">link</span> <span class="ow">in</span> <span class="n">monthly_parser</span><span class="p">.</span><span class="nf">find_all</span><span class="p">(</span><span class="sh">'</span><span class="s">a</span><span class="sh">'</span><span class="p">,</span> <span class="n">href</span><span class="o">=</span><span class="bp">True</span><span class="p">)]</span>
+
+        <span class="c1"># structure of download folder as per year/month
+</span>        <span class="n">download_folder</span> <span class="o">=</span> <span class="n">download_root</span> <span class="o">+</span> <span class="n">year</span>
+        <span class="k">if</span> <span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="nf">exists</span><span class="p">(</span><span class="n">download_folder</span><span class="p">):</span>
+            <span class="k">pass</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">os</span><span class="p">.</span><span class="nf">mkdir</span><span class="p">(</span><span class="n">download_folder</span><span class="p">)</span>
+        
+        <span class="n">download_folder</span> <span class="o">=</span> <span class="n">download_folder</span> <span class="o">+</span> <span class="n">month</span>
+        <span class="k">if</span> <span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="nf">exists</span><span class="p">(</span><span class="n">download_folder</span><span class="p">):</span>
+            <span class="k">pass</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">os</span><span class="p">.</span><span class="nf">mkdir</span><span class="p">(</span><span class="n">download_folder</span><span class="p">)</span>
+        
+        <span class="c1"># download the file
+</span>        <span class="n">os</span><span class="p">.</span><span class="nf">chdir</span><span class="p">(</span><span class="n">download_folder</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">link</span> <span class="ow">in</span> <span class="nf">tqdm</span><span class="p">(</span><span class="n">orbit_links</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">link</span><span class="p">.</span><span class="nf">endswith</span><span class="p">(</span><span class="sh">'</span><span class="s">.EOF.zip</span><span class="sh">'</span><span class="p">):</span>
+                <span class="n">file_url</span> <span class="o">=</span> <span class="n">monthly_url</span> <span class="o">+</span> <span class="n">link</span>
+                <span class="n">filename</span> <span class="o">=</span> <span class="n">link</span><span class="p">.</span><span class="nf">split</span><span class="p">(</span><span class="sh">'</span><span class="s">/</span><span class="sh">'</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+                <span class="n">wget</span><span class="p">.</span><span class="nf">download</span><span class="p">(</span><span class="n">file_url</span><span class="p">)</span>
+                <span class="nf">print</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="s">Downloaded </span><span class="si">{</span><span class="n">filename</span><span class="si">}</span><span class="sh">"</span><span class="p">)</span>
+        <span class="k">break</span>
+    <span class="k">break</span>
+</code></pre></div></div>
+
+<h3 id="references">References</h3>
+<ul>
+  <li>STEP forum - https://forum.step.esa.int/</li>
+  <li>ChatGPT for web scrapping</li>
+  <li>PyGMTSAR - https://github.com/AlexeyPechnikov/pygmtsar</li>
+</ul>]]></content><author><name>Abhishek Mhamane</name></author><category term="MS" /><summary type="html"><![CDATA[There’s a pretty common issue while performing orbit correction in ESA-SNAP. There’s a simple way to pre-download the required orbit files: All the files one at a time (bulk) As per the requirement.]]></summary></entry><entry><title type="html">Programmatic Data Access in Geodesy</title><link href="http://localhost:4000/blog/automate-data-access/" rel="alternate" type="text/html" title="Programmatic Data Access in Geodesy" /><published>2024-05-22T00:00:00+05:30</published><updated>2024-05-22T00:00:00+05:30</updated><id>http://localhost:4000/blog/progm-data-access</id><content type="html" xml:base="http://localhost:4000/blog/automate-data-access/"><![CDATA[<blockquote>
+  <p>Never spend 6 minutes doing something by hand with, when you can spend 6 hours automating it.</p>
+</blockquote>
+
+<p>This will be a tutorial to download common geodetic datasets mainly - Rinex files from their respective ftp servers/APIs.</p>
+
+<h2 id="rinex-files">RINEX Files</h2>
+
+<p>It’s always efficient to download the data in an automated and reporducible manner by leveraging the APIs and ftp automation. One can always log into the filezilla and manually search through the directories for the required file, but this becomes teadious when one has to download files for tens and hundreds of days. Here comes programming to the rescue!</p>
+
+<p>I’ll be using Python as it’s highly flexible, cross platform and boasts a vibrant community of developers both for Geodesy and Geospatial applications.</p>
+
+<p>There are mainly 2 ftp servers hosted by -</p>
+
+<ol>
+  <li>SCRIPPS Orbit and Parmanent Array Center (<a href="http://sopac-csrc.ucsd.edu/index.php/sopac/">SOPAC</a>) from SCRIPPS Institute of Oceanorgaphy at University of Californai, San Diego (UCSD).</li>
+  <li>
+    <h2 id="crustal-dynamics-and-data-information-system-cddis-from-nasa">Crustal Dynamics and Data Information System (<a href="https://cddis.nasa.gov/">CDDIS</a>) from NASA.</h2>
+  </li>
+</ol>
+
+<h3 id="step---1-login">Step - 1: Login</h3>
+
+<p>A simplified implementation to create a ftp login session.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">login_sopac</span><span class="p">(</span><span class="n">username</span><span class="o">=</span><span class="sh">'</span><span class="s">anonymous</span><span class="sh">'</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="sh">''</span><span class="p">):</span>
+    <span class="sh">"""</span><span class="s"> SOPAC ftp login </span><span class="sh">'</span><span class="s">garner.ucsd.edu</span><span class="sh">'</span><span class="s"> 
+
+    Args:
+        username (str): Required to login with </span><span class="sh">'</span><span class="s">anonymous</span><span class="sh">'</span><span class="s">.
+        password (str): Enter Email. Defaults to </span><span class="sh">''</span><span class="s">.
+    </span><span class="sh">"""</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">ftps</span> <span class="o">=</span> <span class="nc">FTP</span><span class="p">()</span>
+        <span class="n">ftps</span><span class="p">.</span><span class="nf">connect</span><span class="p">(</span><span class="sh">'</span><span class="s">garner.ucsd.edu</span><span class="sh">'</span><span class="p">)</span>
+        <span class="n">ftps</span><span class="p">.</span><span class="nf">login</span><span class="p">(</span><span class="n">user</span><span class="o">=</span><span class="n">username</span><span class="p">,</span> <span class="n">passwd</span><span class="o">=</span><span class="n">password</span><span class="p">)</span>
+        <span class="nf">print</span><span class="p">(</span><span class="n">ftps</span><span class="p">.</span><span class="n">welcome</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">ftps</span>
+
+    <span class="k">except</span> <span class="nb">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">Error:</span><span class="sh">"</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>  <span class="c1"># Catch-all for other issues
+</span></code></pre></div></div>
+<hr />
+
+<h3 id="step---2-sopac-directory-structure">Step - 2: SOPAC directory structure</h3>
+
+<p>The daily rinex files are precent in the <code class="language-plaintext highlighter-rouge">/pub/rinex</code> directory. File for a particular date and year can be located in the respective <code class="language-plaintext highlighter-rouge">/pub/rinex/{year}/{doy}</code> directory. After this one has to match the station name using the station id and required rinex version.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">FTP_ROOT</span> <span class="o">=</span> <span class="sh">'</span><span class="s">/pub/rinex</span><span class="sh">'</span>
+<span class="n">FILE_FTP_DIR</span> <span class="o">=</span> <span class="sa">f</span><span class="sh">'</span><span class="si">{</span><span class="n">FTP_ROOT</span><span class="si">}</span><span class="s">/</span><span class="si">{</span><span class="n">year</span><span class="si">}</span><span class="s">/</span><span class="si">{</span><span class="n">doy</span><span class="si">}</span><span class="sh">'</span>
+</code></pre></div></div>
+
+<h3 id="step--3-download-a-specific-file-from-ftp">Step -3: Download a specific file from ftp</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">download</span><span class="p">(</span><span class="n">session</span><span class="p">,</span> <span class="n">fname</span><span class="p">,</span> <span class="n">ftp_dir</span><span class="p">,</span> <span class="n">download_dir</span><span class="p">):</span>
+    <span class="sh">"""</span><span class="s">Download the required file from any ftp server
+
+    Args:
+        session (ftplib.FTP): The login session 
+        fname (str): name of the file (same as in ftp server)        ftp_dir (str): path to the directory at ftp from which file needs to be downloaded
+        download_dir (str): directory path where the file will be downloaded (locally)
+    </span><span class="sh">"""</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="nf">print</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="s">FTP Dir: </span><span class="si">{</span><span class="n">session</span><span class="p">.</span><span class="nf">pwd</span><span class="p">()</span><span class="si">}</span><span class="s">, Local Dir: </span><span class="si">{</span><span class="n">os</span><span class="p">.</span><span class="nf">getcwd</span><span class="p">()</span><span class="si">}</span><span class="sh">"</span><span class="p">)</span>
+
+        <span class="n">session</span><span class="p">.</span><span class="nf">retrbinary</span><span class="p">(</span><span class="sh">"</span><span class="s">RETR </span><span class="sh">"</span> <span class="o">+</span> <span class="n">fname</span><span class="p">,</span> <span class="nf">open</span><span class="p">(</span><span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="nf">join</span><span class="p">(</span><span class="n">download_dir</span><span class="p">,</span> <span class="n">fname</span><span class="p">),</span> <span class="sh">'</span><span class="s">wb</span><span class="sh">'</span><span class="p">).</span><span class="n">write</span><span class="p">)</span>
+
+        <span class="nf">return</span><span class="p">(</span><span class="sa">f</span><span class="sh">'</span><span class="si">{</span><span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="nf">join</span><span class="p">(</span><span class="n">download_dir</span><span class="p">,</span> <span class="n">fname</span><span class="p">)</span><span class="si">}</span><span class="sh">'</span><span class="p">)</span>
+    <span class="k">except</span> <span class="nb">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="nf">print</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="s">Error occured, </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="sh">"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h3 id="step-4-one-stop-solution">Step 4: One stop solution</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="k">def</span> <span class="nf">sopac_rinex</span><span class="p">(</span><span class="n">download_dir</span><span class="p">,</span> <span class="n">session</span><span class="p">,</span> <span class="n">station</span><span class="p">,</span> <span class="n">year</span><span class="p">,</span> <span class="n">doy</span><span class="p">):</span>
+    <span class="sh">"""</span><span class="s">Downloads the rinex file for a given station, year and day of year.
+
+    Args:
+        download_dir (str): path to download dir (local)
+        session (ftp.FTP): login session 
+        station (str): official 4 character station code
+        year (int): year 
+        doy (int): day of year
+
+    Raises:
+        ValueError: data not found
+    </span><span class="sh">"""</span>
+    <span class="n">FTP_ROOT</span> <span class="o">=</span> <span class="sh">'</span><span class="s">/pub/rinex</span><span class="sh">'</span>
+    <span class="n">doy</span> <span class="o">=</span> <span class="nf">str</span><span class="p">(</span><span class="n">doy</span><span class="p">).</span><span class="nf">zfill</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+    <span class="n">FILE_FTP_DIR</span> <span class="o">=</span> <span class="sa">f</span><span class="sh">'</span><span class="si">{</span><span class="n">FTP_ROOT</span><span class="si">}</span><span class="s">/</span><span class="si">{</span><span class="n">year</span><span class="si">}</span><span class="s">/</span><span class="si">{</span><span class="n">doy</span><span class="si">}</span><span class="sh">'</span>
+    
+    <span class="n">session</span><span class="p">.</span><span class="nf">cwd</span><span class="p">(</span><span class="n">FILE_FTP_DIR</span><span class="p">)</span>
+    <span class="n">all_stations</span> <span class="o">=</span> <span class="n">session</span><span class="p">.</span><span class="nf">nlst</span><span class="p">()</span>
+    <span class="n">datafiles</span> <span class="o">=</span> <span class="nf">find_station</span><span class="p">(</span><span class="n">all_stations</span><span class="p">,</span> <span class="n">stn_code</span><span class="o">=</span><span class="n">station</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="nf">len</span><span class="p">(</span><span class="n">datafiles</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="nf">download</span><span class="p">(</span><span class="n">session</span><span class="o">=</span><span class="n">session</span><span class="p">,</span> <span class="n">fname</span><span class="o">=</span><span class="n">datafiles</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">ftp_dir</span><span class="o">=</span><span class="n">FILE_FTP_DIR</span><span class="p">,</span> <span class="n">download_dir</span><span class="o">=</span><span class="n">download_dir</span><span class="p">)</span>
+        <span class="k">except</span> <span class="nb">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="nf">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+
+    <span class="k">elif</span> <span class="nf">len</span><span class="p">(</span><span class="n">datafiles</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="nc">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="s">Station code - </span><span class="si">{</span><span class="n">station</span><span class="si">}</span><span class="s"> data for </span><span class="si">{</span><span class="n">year</span><span class="si">}</span><span class="s"> and day </span><span class="si">{</span><span class="n">doy</span><span class="si">}</span><span class="s"> Not Found</span><span class="sh">"</span><span class="p">)</span>
+    
+</code></pre></div></div>
+
+<p>This can further be used to create a bulk download utility.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">sopac_bulk_rinex</span><span class="p">(</span><span class="n">download_dir</span><span class="p">,</span> <span class="n">station</span><span class="p">,</span> <span class="n">start_year</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">start_doy</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">end_year</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">end_doy</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
+    <span class="sh">"""</span><span class="s">Bulk download rinex files for a given start and end date from SOPAC ftp server.
+
+    Args:
+        download_dir (str): path to download dir (local)
+        station (str): official 4 character station code
+    
+    Raises:
+        ValueError: data not found
+    </span><span class="sh">"""</span>
+
+    <span class="n">sopac</span> <span class="o">=</span> <span class="nf">login_sopac</span><span class="p">()</span>
+
+    <span class="k">if</span> <span class="n">start_year</span> <span class="o">==</span> <span class="n">end_year</span><span class="p">:</span>
+        <span class="n">doys</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">arange</span><span class="p">(</span><span class="n">start_doy</span><span class="p">,</span> <span class="n">end_doy</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">_doy</span> <span class="ow">in</span> <span class="nf">tqdm</span><span class="p">(</span><span class="n">doys</span><span class="p">):</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="nf">sopac_rinex</span><span class="p">(</span><span class="n">download_dir</span><span class="o">=</span><span class="n">download_dir</span><span class="p">,</span> <span class="n">session</span><span class="o">=</span><span class="n">sopac</span><span class="p">,</span> <span class="n">station</span><span class="o">=</span><span class="n">station</span><span class="p">,</span> <span class="n">year</span><span class="o">=</span><span class="n">start_year</span><span class="p">,</span> <span class="n">doy</span><span class="o">=</span><span class="n">_doy</span><span class="p">)</span>
+            <span class="k">except</span> <span class="nb">ValueError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+                <span class="nf">print</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="s">File Not Found - </span><span class="si">{</span><span class="n">station</span><span class="si">}</span><span class="s"> data for </span><span class="si">{</span><span class="n">start_year</span><span class="si">}</span><span class="s"> and day </span><span class="si">{</span><span class="n">_doy</span><span class="si">}</span><span class="s"> - skipping!</span><span class="sh">"</span><span class="p">)</span>
+
+    <span class="k">elif</span> <span class="n">start_year</span> <span class="o">&gt;</span> <span class="n">end_year</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="nc">ValueError</span><span class="p">(</span><span class="sh">"</span><span class="s">Invalid Input: end year should be higher than starting year</span><span class="sh">"</span><span class="p">)</span>
+    
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">years</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">arange</span><span class="p">(</span><span class="n">start_year</span><span class="p">,</span> <span class="n">end_year</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">yr</span> <span class="ow">in</span> <span class="nf">tqdm</span><span class="p">(</span><span class="n">years</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">yr</span> <span class="o">==</span> <span class="n">start_year</span><span class="p">:</span>
+                <span class="n">doys</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">arange</span><span class="p">(</span><span class="n">start_doy</span><span class="p">,</span> <span class="mi">366</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+                <span class="k">for</span> <span class="n">_doy</span> <span class="ow">in</span> <span class="nf">tqdm</span><span class="p">(</span><span class="n">doys</span><span class="p">):</span>
+                    <span class="k">try</span><span class="p">:</span>
+                        <span class="nf">sopac_rinex</span><span class="p">(</span><span class="n">download_dir</span><span class="o">=</span><span class="n">download_dir</span><span class="p">,</span> <span class="n">session</span><span class="o">=</span><span class="n">sopac</span><span class="p">,</span> <span class="n">station</span><span class="o">=</span><span class="n">station</span><span class="p">,</span> <span class="n">year</span><span class="o">=</span><span class="n">start_year</span><span class="p">,</span> <span class="n">doy</span><span class="o">=</span><span class="n">_doy</span><span class="p">)</span>
+                    <span class="k">except</span> <span class="nb">ValueError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+                        <span class="nf">print</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="s">File Not Found - </span><span class="si">{</span><span class="n">station</span><span class="si">}</span><span class="s"> data for </span><span class="si">{</span><span class="n">start_year</span><span class="si">}</span><span class="s"> and day </span><span class="si">{</span><span class="n">_doy</span><span class="si">}</span><span class="s"> - skipping!</span><span class="sh">"</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="n">yr</span> <span class="o">&gt;</span> <span class="n">start_year</span> <span class="ow">and</span> <span class="n">yr</span> <span class="o">&lt;</span> <span class="n">end_year</span><span class="p">:</span>
+                <span class="n">doys</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">366</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+                <span class="k">for</span> <span class="n">_doy</span> <span class="ow">in</span> <span class="nf">tqdm</span><span class="p">(</span><span class="n">doys</span><span class="p">):</span>
+                    <span class="k">try</span><span class="p">:</span>
+                        <span class="nf">sopac_rinex</span><span class="p">(</span><span class="n">download_dir</span><span class="o">=</span><span class="n">download_dir</span><span class="p">,</span> <span class="n">session</span><span class="o">=</span><span class="n">sopac</span><span class="p">,</span> <span class="n">station</span><span class="o">=</span><span class="n">station</span><span class="p">,</span> <span class="n">year</span><span class="o">=</span><span class="n">start_year</span><span class="p">,</span> <span class="n">doy</span><span class="o">=</span><span class="n">_doy</span><span class="p">)</span>
+                    <span class="k">except</span> <span class="nb">ValueError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+                        <span class="nf">print</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="s">File Not Found - </span><span class="si">{</span><span class="n">station</span><span class="si">}</span><span class="s"> data for </span><span class="si">{</span><span class="n">start_year</span><span class="si">}</span><span class="s"> and day </span><span class="si">{</span><span class="n">_doy</span><span class="si">}</span><span class="s"> - skipping!</span><span class="sh">"</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="n">yr</span> <span class="o">==</span> <span class="n">end_year</span><span class="p">:</span>
+                <span class="n">doys</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">end_doy</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+                <span class="k">for</span> <span class="n">_doy</span> <span class="ow">in</span> <span class="nf">tqdm</span><span class="p">(</span><span class="n">doys</span><span class="p">):</span>
+                    <span class="k">try</span><span class="p">:</span>
+                        <span class="nf">sopac_rinex</span><span class="p">(</span><span class="n">download_dir</span><span class="o">=</span><span class="n">download_dir</span><span class="p">,</span> <span class="n">session</span><span class="o">=</span><span class="n">sopac</span><span class="p">,</span> <span class="n">station</span><span class="o">=</span><span class="n">station</span><span class="p">,</span> <span class="n">year</span><span class="o">=</span><span class="n">start_year</span><span class="p">,</span> <span class="n">doy</span><span class="o">=</span><span class="n">_doy</span><span class="p">)</span>
+                    <span class="k">except</span> <span class="nb">ValueError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+                        <span class="nf">print</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="s">File Not Found - </span><span class="si">{</span><span class="n">station</span><span class="si">}</span><span class="s"> data for </span><span class="si">{</span><span class="n">start_year</span><span class="si">}</span><span class="s"> and day </span><span class="si">{</span><span class="n">_doy</span><span class="si">}</span><span class="s"> - skipping!</span><span class="sh">"</span><span class="p">)</span>
+
+</code></pre></div></div>
+
+<p>These are a simplified first order solution, further iterations will be required to improve the code. Nonetheless it is a good starting point to get things done!!</p>]]></content><author><name>Abhishek Mhamane</name></author><summary type="html"><![CDATA[Never spend 6 minutes doing something by hand with, when you can spend 6 hours automating it.]]></summary></entry><entry><title type="html">Learning Rabbit Hole</title><link href="http://localhost:4000/blog/learning-rabbit-hole/" rel="alternate" type="text/html" title="Learning Rabbit Hole" /><published>2024-01-28T00:00:00+05:30</published><updated>2024-01-28T00:00:00+05:30</updated><id>http://localhost:4000/blog/learning-rabbit-hole</id><content type="html" xml:base="http://localhost:4000/blog/learning-rabbit-hole/"><![CDATA[<p>I find myself chasing after the next best thing: data structures and algorithms, Linux, Julia, signal processing, etc… The accessibility to learning content online and the lectures/tutorials on YouTube provide an instant dopamine hit from learning new stuff.</p>
+
+<p>But in reality, lack of knowing is not the problem. Execution is the main hurdle. Knowing limited stuff in detail is better than knowing a lot only at the surface level. Investing time in particular things at once only leads to skills and insights. I’m trying not to go into this learning rabbit hole, which is just a glorified form of procrastination that feels productive but is equally detrimental, if not more.</p>]]></content><author><name>Abhishek Mhamane</name></author><category term="IITK" /><category term="Thesis" /><category term="Reflections" /><summary type="html"><![CDATA[I find myself chasing after the next best thing: data structures and algorithms, Linux, Julia, signal processing, etc… The accessibility to learning content online and the lectures/tutorials on YouTube provide an instant dopamine hit from learning new stuff.]]></summary></entry><entry><title type="html">Troubleshooting and Understanding</title><link href="http://localhost:4000/blog/troubleshooting-understanding/" rel="alternate" type="text/html" title="Troubleshooting and Understanding" /><published>2023-11-10T00:00:00+05:30</published><updated>2023-11-10T00:00:00+05:30</updated><id>http://localhost:4000/blog/snap-troubleshooting</id><content type="html" xml:base="http://localhost:4000/blog/troubleshooting-understanding/"><![CDATA[<p>I had been struggling with the InSAR processing using SNAP for quite some time. There is always one cryptic message after another. The one that halted my progress was related to topographic phase removal. There was an issue with downloading the EGM96 model. I wondered why one requires a geoid model when I already have DEM for phase removal.</p>
+
+<p>The issue with downloading the model was related to blocking the FTP link on IITK WiFi. I was so furious; such a trivial thing halted my progress, and I could not figure it out earlier. The issue was solved after placing the required EGM model in the necessary directory, Thanks to a helpful GitHub Issue response<a href="https://github.com/johntruckenbrodt/pyroSAR/issues/98">1</a>.
+.</p>
+
+<p>The answer is simple: InSAR works with ellipsoidal heights, and SRTM DEM (v3) is in WGS84 but with EGM08 as its datum. For the datum to be WGS84, one must add the geoid model, basics of ellipsoidal and orthometric heights. Then, I also found a dedicated function in GMTSAR<a href="https://topex.ucsd.edu/gmtsar/demgen/">2</a> and custom scripts<a href="https://github.com/insarwxw/run_download_DEM">3</a> on Git Hub for the same.</p>
+
+<p>The one thing I learned is that troubleshooting requires patience. I had learned this before too, while debugging PySHBundle. But I forgot the lesson, going systematically; one step at a time, eliminating every possible known error source and iterating is the only solution to troubleshoot</p>
+
+<p>Untill next time…</p>
+
+<p>Helpful Links: <br />
+[1] Github Issues - https://github.com/johntruckenbrodt/pyroSAR/issues/98 <br />
+[2] GMTSAR DEM webpage - https://topex.ucsd.edu/gmtsar/demgen/ <br />
+[3] Custon shell script - https://github.com/insarwxw/run_download_DEM <br /></p>]]></content><author><name>Abhishek Mhamane</name></author><category term="MS" /><summary type="html"><![CDATA[I had been struggling with the InSAR processing using SNAP for quite some time. There is always one cryptic message after another. The one that halted my progress was related to topographic phase removal. There was an issue with downloading the EGM96 model. I wondered why one requires a geoid model when I already have DEM for phase removal.]]></summary></entry><entry><title type="html">Reflecting on the first semester at IIT Kanpur</title><link href="http://localhost:4000/blog/reflect-msr-fy/" rel="alternate" type="text/html" title="Reflecting on the first semester at IIT Kanpur" /><published>2022-12-10T00:00:00+05:30</published><updated>2022-12-10T00:00:00+05:30</updated><id>http://localhost:4000/blog/ms-r-reflect-1</id><content type="html" xml:base="http://localhost:4000/blog/reflect-msr-fy/"><![CDATA[<p>Before joining IIT Kanpur, I only knew about Prof. Dr. Bharat Lohani from his Surveying NPTEL course (the best Surveying course to date on the Internet) and his company GeoKno’s pioneering work in LiDAR technology. My reason for staying is my newfound interest in the field of Geodesy.</p>
+
+<p>Geodesy studies the Earth’s Shape, Size, Rotation, Orientation, Gravity field and temporal variations. Geodesy is arguably the oldest scientific discipline. Geodesy is the foundation of the $1 trillion Geospatial Industry. A stark reality check is that India still lacks quality Geodetic Infracture.</p>
+
+<p>After completing my first semester of MS-R in Geoinformatics at IIT Kanpur, I am sure I made the right decision. All courses involve Programming (MATLAB / Python ), and assignments here are problem-solving oriented rather than simple formula chugging. Projects and term-paper involve applications of real-life data.</p>
+
+<h2 id="coursework">Coursework</h2>
+<p>A brief overview of Courses – Reference frames, Map Projections and Coordinate systems; Geodetic Astronomy and Satellite Geodesy provided the essential basics for Geodesy and Geoinformatics. Adjustment Computation is one course that will be the bread and butter of a geodesist for estimations and error propagation analysis. Physical Geodesy introduced me to the new world of geodesy, Gravity field analysis, Geoid modelling and Satellite Altimetry.</p>
+
+<p>All the faculty members are passionate about Geodesy and Geoinformatics with decades of experience. At the same time, they are very supportive and approachable. I have had the pleasure of having informative and insightful discussions with them.</p>
+
+<h2 id="workshop">Workshop</h2>
+
+<p>During the Mid-Semester break, I got an exciting opportunity to attend GRACE HackWeek, which the National Centre for Geodesy Indian Institute of Technology Kanpur organized. GRACE Hackweek aimed to introduce the utility of Time variable gravity data from the Gravity Recovery and Climate Experiment (GRACE) mission. It brought experts from around the world (NASA JPL, TU9, ITC Twente, IISc and other leading institutions) to share their knowledge and experience of GRACE Data Processing and novel applications of GRACE.</p>
+
+<h2 id="survey-camp">Survey Camp</h2>
+<p>After finishing the tiring end-sem exams, it was time for the 8-day Survey Camp at Chitrakoot. Operating state-of-the-art instruments like Total Stations, Survey grade GNSS receivers, Hand-held GIS enabled GPS receivers and Auto Level for mapping, feature collection and contouring of the campsite provided an exceptional experience. This was the time when theoretical knowledge transformed into practical expertise, and bonds were forged among fellow campmates.</p>
+
+<p>As I wrap up this transformative first semester of my MS research journey in Geoinformatics. Untill next time, this was written to express…</p>]]></content><author><name>Abhishek Mhamane</name></author><summary type="html"><![CDATA[Before joining IIT Kanpur, I only knew about Prof. Dr. Bharat Lohani from his Surveying NPTEL course (the best Surveying course to date on the Internet) and his company GeoKno’s pioneering work in LiDAR technology. My reason for staying is my newfound interest in the field of Geodesy.]]></summary></entry></feed>

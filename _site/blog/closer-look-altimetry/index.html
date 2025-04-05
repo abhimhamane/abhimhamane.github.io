@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Closer look at the Altimetric Datasets</title><!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Closer look at the Altimetric Datasets" />
+<meta name="author" content="Abhishek Mhamane" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Let’s take a look at different datasets with help of some Visualizations. The two datasets used are - AVISO GDR ALES OpenADB coastal retracked from Technical University of Munich (TUM)" />
+<meta property="og:description" content="Let’s take a look at different datasets with help of some Visualizations. The two datasets used are - AVISO GDR ALES OpenADB coastal retracked from Technical University of Munich (TUM)" />
+<link rel="canonical" href="http://localhost:4000/blog/closer-look-altimetry/" />
+<meta property="og:url" content="http://localhost:4000/blog/closer-look-altimetry/" />
+<meta property="og:site_name" content="wandering earthling" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-06-21T00:00:00+05:30" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Closer look at the Altimetric Datasets" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Abhishek Mhamane"},"dateModified":"2024-06-21T00:00:00+05:30","datePublished":"2024-06-21T00:00:00+05:30","description":"Let’s take a look at different datasets with help of some Visualizations. The two datasets used are - AVISO GDR ALES OpenADB coastal retracked from Technical University of Munich (TUM)","headline":"Closer look at the Altimetric Datasets","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/closer-look-altimetry/"},"url":"http://localhost:4000/blog/closer-look-altimetry/"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="wandering earthling" /><link rel="shortcut icon" type="image/x-icon" href="" />
+  <link rel="stylesheet" href="/assets/css/main.css" />
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6692059565174248"
+     crossorigin="anonymous"></script>
+</head><body data-theme="auto">
+    <main class="page-content" aria-label="Content">
+      <div class="w">
+        <button id="mode"><span id="mode-text">🌕</span></button>
+        <a href="/">hompage</a><article>
+  <p class="post-meta">
+    <span class="reading-time" title="Estimated read time">
+  
+  
+    2 mins
+  
+</span>
+ | <time datetime="2024-06-21 00:00:00 +0530">2024-06-21</time>
+  </p>
+  
+  <h1>Closer look at the Altimetric Datasets</h1>
+
+  <ul><li><a href="#1-data-availability-missing-cycles-across-cycles-and-tracks">1. Data Availability (Missing Cycles) across cycles and tracks</a></li><li><a href="#2-waveform-contamination-and-distance-to-coast">2. Waveform contamination and distance to coast</a></li><li><a href="#3-spatial-and-temporal-resolution-tradeoff">3. Spatial and Temporal resolution tradeoff</a></li><li><a href="#4-repeat-passes">4. Repeat Passes</a></li><li><a href="#5-closer-look-at-the-repeat-passes">5. Closer look at the repeat passes</a></li><li><a href="#6-lets-find-the-cross-over-points">6. Let’s find the Cross-Over points</a></li></ul>
+
+
+
+  <p>Let’s take a look at different datasets with help of some Visualizations. The two datasets used are -</p>
+<ol>
+  <li>AVISO GDR</li>
+  <li>ALES OpenADB coastal retracked from Technical University of Munich (TUM)</li>
+</ol>
+
+<p>These are nothing new or noval ways to visualize. This might even seem very trivial to many, but this is my effort to document my learnings and develop as a researcher.</p>
+
+<h3 id="1-data-availability-missing-cycles-across-cycles-and-tracks">1. Data Availability (Missing Cycles) across cycles and tracks</h3>
+
+<p>The red represents missing cycles whereas blue represents data availability.</p>
+
+<p><img src="/images/altimetry-MSR-thesis/envisat-data-availability.png" alt="envisat available" /></p>
+
+<p><img src="/images/altimetry-MSR-thesis/jason-1data-availability.png" alt="Jason-1 available" /></p>
+
+<p>SARAL ALES OpenADB data
+<img src="/images/altimetry-MSR-thesis/saral-data-availability.png" alt="Saral available" /></p>
+
+<h3 id="2-waveform-contamination-and-distance-to-coast">2. Waveform contamination and distance to coast</h3>
+
+<p>The waveforms were retrieved from the Sensor record from AVISO.</p>
+
+<p><img src="/images/altimetry-MSR-thesis/altimetry_waveform_different_regions.svg" alt="Waveform contamination" width="400" /></p>
+
+<p>In the standard AVISO GDR data processing the coastal regions are masked. Whereas the Sea Surface Height (SSH) info can be retrieved to certain extent using coastal retracking algorithms. Precisely can be observed in the ALES OpenADB data.</p>
+
+<p><img src="/images/altimetry-MSR-thesis/aviso-ales-distance2coast.png" alt="Waveform contamination" width="250" /></p>
+
+<h3 id="3-spatial-and-temporal-resolution-tradeoff">3. Spatial and Temporal resolution tradeoff</h3>
+
+<p>The tracks of SARAL are more closely spaced compared to the Jason-2 tracks. SARAL has a repeat cycle of ~35 days whereas Jason-2 has of ~11 days.</p>
+
+<p><img src="/images/altimetry-MSR-thesis/tracks.png" alt="Waveform contamination" width="250" /></p>
+
+<h3 id="4-repeat-passes">4. Repeat Passes</h3>
+
+<p>The repeat passes do not allign exactly, which is expected due to orbital peturbations and other practical limitaion involved with satellite geodesy.</p>
+
+<p><img src="/images/altimetry-MSR-thesis/changes-cycles-tracks.png" alt="Waveform contamination" width="550" /></p>
+
+<h3 id="5-closer-look-at-the-repeat-passes">5. Closer look at the repeat passes</h3>
+
+<p>SARAL mission has pretty scattered accquisation points, scattered both along the accending and descending tracks.</p>
+
+<p><img src="/images/altimetry-MSR-thesis/saral-cycles-tracks.png" alt="Waveform contamination" width="350" /></p>
+
+<p>Curiously, for Jason-2 the accqisations are pretty well clustered along descending track and not so well along the ascending track. I could not find any references which explained this observations.</p>
+
+<p><img src="/images/altimetry-MSR-thesis/jason-cycles-cluster.png" alt="Waveform contamination" width="350" /></p>
+
+<h3 id="6-lets-find-the-cross-over-points">6. Let’s find the Cross-Over points</h3>
+
+<p>The cross-over was identified by determining the minimum distance b/w pairs of ascending and descending track accquisations over a small window.</p>
+
+<p><img src="/images/altimetry-MSR-thesis/track-intersection-1.png" alt="Waveform contamination" width="350" /></p>
+
+<p>The traingle represent the two cross-over points, not exactly coinciding with each other.</p>
+
+<p><img src="/images/altimetry-MSR-thesis/track-intersection-2.png" alt="Waveform contamination" width="350" /></p>
+
+<p>Following the same approach for other cycles we get the following variations in cross-over points.</p>
+
+<p><img src="/images/altimetry-MSR-thesis/track-intersection-3.png" alt="Waveform contamination" width="350" /></p>
+
+</article>
+      </div>
+    </main>
+    <script src="/assets/js/mode-change.js"></script>
+  </body>
+</html>

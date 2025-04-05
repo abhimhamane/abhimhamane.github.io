@@ -1,0 +1,137 @@
+body[data-theme=dark] {
+  filter: invert(1);
+}
+body[data-theme=dark] img {
+  filter: invert(1);
+}
+body[data-theme=dark] img.ioda {
+  filter: invert(0);
+}
+
+@media (prefers-color-scheme: dark) {
+  body[data-theme=auto] {
+    filter: invert(1);
+  }
+  body[data-theme=auto] img {
+    filter: invert(1);
+  }
+  body[data-theme=auto] img.ioda {
+    filter: invert(0);
+  }
+}
+html,
+body {
+  background: white;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  color: black;
+  font-family: monospace;
+  font-size: 16px;
+  line-height: 1.4;
+  margin: 0;
+  min-height: 100%;
+  overflow-wrap: break-word;
+}
+
+.post-meta {
+  text-align: right;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 3rem;
+}
+
+hr {
+  margin: 2rem 0;
+}
+
+p {
+  margin: 1rem 0;
+}
+
+li {
+  margin: 0.4rem 0;
+}
+
+*:target {
+  background: yellow;
+}
+
+.w {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+hr {
+  text-align: center;
+  border: 0;
+}
+hr:before {
+  content: "/////";
+}
+hr:after {
+  content: attr(data-content) "/////";
+}
+
+table {
+  width: 100%;
+}
+
+table,
+th,
+td {
+  border: thin solid black;
+  border-collapse: collapse;
+  padding: 0.4rem;
+}
+
+code {
+  color: white;
+  background: black;
+}
+
+div.highlighter-rouge code {
+  display: block;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  padding: 1rem;
+}
+
+blockquote {
+  font-style: italic;
+  border: thin solid black;
+  padding: 1rem;
+}
+blockquote p {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+#mode {
+  background: white;
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  z-index: 100;
+  border: 2px solid #fff;
+  border-radius: 100%;
+  transform: rotate(45deg);
+}
+
+/*# sourceMappingURL=main.css.map */
