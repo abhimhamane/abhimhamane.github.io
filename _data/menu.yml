@@ -1,16 +1,4 @@
 entries:
-  - title: Who am I?
-    entries:
-      - title: more about me 
-        url: /about
-      - title: email 
-        url: mailto:abhi4socials@gmail.com
-      - title: linkedin
-        url: https://www.linkedin.com/in/abhishek-mhamane/
-      - title: github 
-        url: https://github.com/abhimhamane
-
-
   - title: Blog - all posts
     post_list : 
      limit: 3
@@ -32,3 +20,13 @@ entries:
       show_more: true
       show_more_text: See more posts...
       show_more_url: archive_books.html
+
+  - title: Contact me
+    entries:
+      - title: email 
+        url: mailto:abhi4socials@gmail.com
+      - title: linkedin
+        url: https://www.linkedin.com/in/abhishek-mhamane/
+      - title: github 
+        url: https://github.com/abhimhamane
+
