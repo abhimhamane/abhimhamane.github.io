@@ -1,0 +1,1 @@
+This website is based on the Jekyll template by riggraz on GitHub and you can find the template at https://riggraz.dev/no-style-please/.
