@@ -4,7 +4,7 @@
 entries:
   - title: About me
     url: /about/
-    
+
   - title: Blog - all posts
     post_list : 
       limit: 3
@@ -26,3 +26,10 @@ entries:
       show_more: true
       show_more_text: See more posts...
       show_more_url: archive_books.html
+  
+  - title: S0cials
+    entries: 
+      - title: LinkedIn (Feel free to drop a message in there)
+        url: https://www.linkedin.com/in/abhishek-mhamane/
+
+
