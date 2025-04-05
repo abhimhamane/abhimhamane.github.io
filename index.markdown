@@ -4,6 +4,7 @@
 
 layout: home
 ---
+
 I'm Abhishek Mhamane (or a wandering earthling). Currently training to become an independent researcher in the field of Satellite Geodesy.
 
 I'm interested in learning about how we can measure the Earth's gravity field from space. What insight can the time variable Earth's gravity field provide about various Mass transport and Mass re-distributing processes of Atmosphere, Hydrology, Solid Earth, Oceans and Cryosphere.
