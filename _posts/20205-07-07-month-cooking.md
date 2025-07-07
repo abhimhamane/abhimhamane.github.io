@@ -2,7 +2,7 @@
 layout: post
 title: 'What food I made last month'
 date: 2025-07-07
-permalink: /food-last-month/
+permalink: /blog/food-last-month/
 published: true
 ---
 
