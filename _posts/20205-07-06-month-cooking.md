@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'What food I made last month'
-date: 2025-07-07
+date: 2025-07-06
 permalink: /blog/food-last-month/
 published: true
 ---
