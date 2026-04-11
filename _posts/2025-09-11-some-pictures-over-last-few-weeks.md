@@ -19,7 +19,7 @@ published: true
 ![Always good to see the flags fluttering](/images/album-2025-26/IMG_2413.HEIC.jpg)
 
 ## Nice lake along the banks of Neckar
-![Nice lake along the banks of Neckar](/images/album-2025-26/IMG_1940.jpg)
+![Nice lake along the banks of Neckar](/images/album-2025-26/IMG_2299.HEIC.jpg)
 
 ## Somewhere in rural southern Germany
 ![Somewhere in rural southern Germany](/images/album-2025-26/rural.jpg)
@@ -36,3 +36,5 @@ published: true
 ## Christmas market evening
 ![Christmas market evening](/images/album-2025-26/prox(10).jpg)
 
+## Clocks and rotating adverts at bus stops and U-Bahn stations
+![clock and rotating advert at ](/images/album-2025-26/IMG_1940.jpg)
