@@ -8,5 +8,21 @@ published: true
 
 ![Apple cake and iced americano at a cafe](/images/album-2025-26/IMG_0730.JPG)
 
+![A night of work... outside the institute](/images/album-2025-26/IMG_0660.HEIC.jpg)
 
-![Cool cars to be spoted around in Stuttgart](/images/album-2025-26/IMG_1449.HEIC)
+![Autumn evening from the office](/images/album-2025-26/IMG_0466.HEIC.jpg)
+
+![Always good to see the flags fluttering](/images/album-2025-26/IMG_2413.HEIC.jpg)
+
+![Nice lake along the banks of Neckar](/images/album-2025-26/IMG_1940.jpg)
+
+![Somewhere in rural southern Germany](/images/album-2025-26/rural.jpg)
+
+![First time experiencing snow](/images/album-2025-26/IMG_1172.HEIC.jpg)
+
+![Kepler statue at city square of Weil der Stadt](/images/album-2025-26/IMG_1902.HEIC.jpg)
+
+![Old city wall (I guess) outside Weil der Stadt](/images/album-2025-26/IMG_1923.HEIC.jpg)
+
+![Christmas market evening](/images/album-2025-26/prox(10).jpg)
+
