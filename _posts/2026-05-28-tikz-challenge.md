@@ -32,3 +32,6 @@ Day 1 - Learning about help grid... this is better to visualize the grid, no mor
 ```
 
 The syntax will take some time to sink in.
+
+Helpful content - 
+1. [Unlocking LaTeX Graphics YouTube channel from Dr. Tamara Kolda](https://www.youtube.com/@UnlockingLaTeXGraphics)
