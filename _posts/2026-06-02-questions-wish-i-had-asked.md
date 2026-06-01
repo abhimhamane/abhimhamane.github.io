@@ -23,5 +23,8 @@ As of June 2026, V0.1.0
 5. How did surveyors plot coastlines from ship?
 6. How did people figure out celestial navigation?
 7. How was time conceptulized by ancient civilizations?
+8. I still do not understand clearly eclipses and phases of the moon.
 
 I will try to write a sort of detailed answers for each of these questions from time to time, as and when I rediscover these answers for myself from the endless ocean of Internet and books.
+
+The inspiration to make this post came when I was watching the video by Grant Sanderson (3blue1brown) interviewing Terence Tao. Honestly, I am regreting not studying properly in my school... These are so many fundamental questions, I never thought about... just blindly memorizing answers.
