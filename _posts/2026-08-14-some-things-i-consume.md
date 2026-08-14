@@ -3,7 +3,7 @@ layout: post
 title: 'Content I consume'
 date: 2026-08-14
 permalink: /blog/things-i-consume/
-published: false
+published: true
 tags:
   - PhD
   - reflections
