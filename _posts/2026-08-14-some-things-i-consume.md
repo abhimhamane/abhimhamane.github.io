@@ -20,8 +20,9 @@ Just a list of content I consume online. It is shows, podcasts, songs, anything 
 2. Unfiltered by Samdish 
 
 ## Academics/career
-1. Nature Careers
+1. Science & Science careers
 2. EGU blogs
+3. IEEE Spectrum
 
 ## YouTube
 1. Bioshala - https://www.youtube.com/@bioshala
