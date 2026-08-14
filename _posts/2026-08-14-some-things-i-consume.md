@@ -14,6 +14,7 @@ Just a list of content I consume online. It is shows, podcasts, songs, anything 
 ## Podcast
 1. Pratidhvani - Humanizing Science by Prof. G.V. Pavan Kumar
 2. Made in Science - University of Stuttgart podcast
+3. Everything is Everything hosted by Amit Varma and Ajay Shah (discontinued now)
 
 ## News
 1. Cut The Clutter by Shekhar Gupta - The Print YouTube channel
