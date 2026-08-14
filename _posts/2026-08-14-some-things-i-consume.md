@@ -27,6 +27,7 @@ Just a list of content I consume online. It is shows, podcasts, songs, anything 
 1. Bioshala - https://www.youtube.com/@bioshala
 2. FreeFinCal - https://www.youtube.com/@pattufreefincal
 3. Captain Disillusion - https://www.youtube.com/@CaptainDisillusion
+
 and many more for next time
 
 ## Music - most played for a long time
