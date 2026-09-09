@@ -3,7 +3,7 @@ layout: post
 title: 'Improving my TikZ skills'
 date: 2026-05-28
 permalink: /blog/tikz-challenge/
-published: true
+published: false
 tags:
   - PhD
   - research
