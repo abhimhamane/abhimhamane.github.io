@@ -3,7 +3,7 @@ layout: post
 title: 'Questions wish I had asked'
 date: 2026-06-01
 permalink: /blog/questions-i-wish-i-asked/
-published: true
+published: false
 tags:
   - PhD
   - research
